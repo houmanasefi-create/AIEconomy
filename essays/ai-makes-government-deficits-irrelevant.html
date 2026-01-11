@@ -390,28 +390,83 @@
         <p>Let us formalize the relationship. In traditional economic models, sustainable deficit levels are loosely bounded by expected growth rates. A simplified rule might suggest:</p>
 
         <div class="formula">
-Sustainable Deficit Rate ≈ Expected Nominal GDP Growth Rate - Risk Buffer
+<strong>Traditional Sustainable Deficit:</strong>
 
-Where Risk Buffer accounts for uncertainty, inflation targets, and credibility needs
+d<sub>sustainable</sub> ≈ g<sub>nominal</sub> - β
+
+Where:
+  d<sub>sustainable</sub> = sustainable deficit as % of GDP
+  g<sub>nominal</sub> = expected nominal GDP growth rate
+  β = risk buffer (uncertainty, inflation targets, credibility needs)
         </div>
 
         <p>In a traditional environment with 2% real growth and 2% inflation (4% nominal growth), sustainable deficits might be approximately 2-3% of GDP, leaving a risk buffer. This explains the European Union's 3% deficit ceiling.</p>
 
+        <p>To understand the debt dynamics more precisely, consider the evolution of the debt-to-GDP ratio. Let D<sub>t</sub> represent total debt in year t, Y<sub>t</sub> represent GDP, d represent the deficit as a share of GDP, and g represent the nominal growth rate. The debt-to-GDP ratio evolves as:</p>
+
+        <div class="formula">
+<strong>Debt-to-GDP Ratio Evolution:</strong>
+
+D<sub>t+1</sub>/Y<sub>t+1</sub> = (D<sub>t</sub> + d·Y<sub>t</sub>)/(Y<sub>t</sub>·(1 + g))
+
+Simplifying:
+D<sub>t+1</sub>/Y<sub>t+1</sub> = (D<sub>t</sub>/Y<sub>t</sub>)·(1/(1 + g)) + d/(1 + g)
+
+For small values of g:
+D<sub>t+1</sub>/Y<sub>t+1</sub> ≈ (D<sub>t</sub>/Y<sub>t</sub>)·(1 - g) + d
+
+Therefore, the debt ratio stabilizes when:
+d = g·(D<sub>t</sub>/Y<sub>t</sub>)
+        </div>
+
+        <p>This reveals that the sustainable deficit depends on both the growth rate and the existing debt level. For a country with 100% debt-to-GDP ratio and 3% growth, the deficit can be 3% while maintaining a stable ratio. However, for the same country with 15% growth, a deficit of 15% would maintain stability.</p>
+
         <p>Now consider an AI-transformed economy where:</p>
 
         <div class="formula">
-AI-Enhanced Growth = Base Growth + AI Productivity Premium
+<strong>AI-Enhanced Growth Model:</strong>
 
-If Base Growth = 2-3% and AI Productivity Premium = 10-15%
-Then Total Growth = 12-18% nominal
+g<sub>AI</sub> = g<sub>base</sub> + π<sub>AI</sub>
+
+Where:
+  g<sub>AI</sub> = total nominal GDP growth rate with AI
+  g<sub>base</sub> = baseline growth rate (2-3%)
+  π<sub>AI</sub> = AI productivity premium (10-15%)
+
+Therefore:
+  g<sub>AI</sub> = 2-3% + 10-15% = 12-18%
+
+Sustainable deficit under AI becomes:
+d<sub>AI-sustainable</sub> = g<sub>AI</sub> - β = 12-18% - (2-3%) = 10-15% of GDP
         </div>
 
         <p>In this scenario, sustainable deficits could plausibly reach:</p>
 
         <div class="formula">
-Sustainable Deficit (AI Economy) = 10-15% of GDP
+<strong>AI Economy Fiscal Capacity:</strong>
 
-While maintaining stable or declining debt-to-GDP ratios
+d<sub>AI-sustainable</sub> = 10-15% of GDP
+
+While maintaining stable or declining debt-to-GDP ratios:
+
+If g<sub>AI</sub> = 15% and d = 10%, then:
+ΔDebt/GDP = d - g·(D/Y) = 10% - 15%·(D/Y)
+
+For any debt ratio D/Y < 67%, the debt-to-GDP ratio actually declines
+        </div>
+
+        <p>We can further model the long-term trajectory. If a country runs a constant deficit d while experiencing constant growth g, the debt-to-GDP ratio converges to:</p>
+
+        <div class="formula">
+<strong>Steady-State Debt Ratio:</strong>
+
+lim<sub>t→∞</sub> (D<sub>t</sub>/Y<sub>t</sub>) = d/g
+
+Examples:
+  Traditional economy: d = 3%, g = 3% → D/Y = 100%
+  AI economy: d = 12%, g = 15% → D/Y = 80%
+
+Despite running 4× the deficit, the AI economy maintains lower steady-state debt!
         </div>
 
         <p>The transformation proves dramatic: deficits that would be catastrophic under 3% growth become easily manageable under 15% growth. This is not incremental change but a paradigm shift.</p>
