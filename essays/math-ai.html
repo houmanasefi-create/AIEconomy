@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1a1814;
+      --paper: #f5f1ea;
+      --paper-dark: #ede8de;
+      --accent: #8b3a2a;
+      --accent-light: #c4634f;
+      --muted: #6b6459;
+      --border: #d4cfc4;
+      --highlight: #f0e8d0;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 18px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ---- HEADER ---- */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .site-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .site-nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .site-nav a:hover {
+      color: var(--accent);
+    }
+
+    /* ---- HERO / TITLE BLOCK ---- */
+    .article-hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 5rem 2rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .doc-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .doc-label::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 3rem;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .article-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .article-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-style: italic;
+      max-width: 640px;
+      line-height: 1.65;
+      margin-bottom: 2.5rem;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .meta-item span {
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    /* ---- LAYOUT ---- */
+    .article-layout {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 4rem;
+      align-items: start;
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+    }
+
+    /* ---- SIDEBAR ---- */
+    .sidebar {
+      position: sticky;
+      top: 5rem;
+    }
+
+    .sidebar-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .sidebar-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list {
+      list-style: none;
+    }
+
+    .toc-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    .toc-list a {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-decoration: none;
+      line-height: 1.4;
+      display: block;
+      transition: color 0.2s, padding-left 0.2s;
+    }
+
+    .toc-list a:hover {
+      color: var(--accent);
+      padding-left: 0.3rem;
+    }
+
+    .key-terms {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .key-term {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--paper-dark);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.3rem 0.6rem;
+      border-radius: 2px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    /* ---- MAIN CONTENT ---- */
+    .article-body {
+      min-width: 0;
+    }
+
+    .opening-statement {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--ink);
+      margin-bottom: 3rem;
+      padding: 1.8rem 2rem;
+      background: var(--paper-dark);
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+    }
+
+    .section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      line-height: 1.25;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--ink);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---- CALLOUT / PULL QUOTE ---- */
+    .pull-quote {
+      margin: 2.5rem 0;
+      padding: 1.5rem 2rem;
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    /* ---- POWER MAP TABLE ---- */
+    .power-map {
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .power-map thead {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .power-map th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 1rem;
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .power-map td {
+      font-size: 0.85rem;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .power-map tr:last-child td {
+      border-bottom: none;
+    }
+
+    .power-map tr:nth-child(even) td {
+      background: var(--paper-dark);
+    }
+
+    .status-active {
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    /* ---- INSIGHT BOX ---- */
+    .insight-box {
+      background: var(--highlight);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 1.8rem;
+      margin: 2.5rem 0;
+    }
+
+    .insight-box .insight-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+
+    .insight-box p {
+      font-size: 0.95rem;
+      margin-bottom: 0;
+      color: var(--ink);
+    }
+
+    /* ---- SOVEREIGNTY MATRIX ---- */
+    .sovereignty-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    .sovereignty-cell {
+      background: var(--paper);
+      padding: 1.3rem 1.5rem;
+    }
+
+    .sovereignty-cell.header-cell {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .cell-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-cell .cell-label {
+      color: var(--paper);
+      opacity: 0.7;
+    }
+
+    .cell-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .header-cell .cell-title {
+      color: var(--paper);
+    }
+
+    .cell-desc {
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: var(--muted);
+    }
+
+    .sovereignty-cell.danger .cell-title {
+      color: var(--accent);
+    }
+
+    /* ---- CLOSING ---- */
+    .article-closing {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--ink);
+    }
+
+    .article-closing p {
+      font-size: 1rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .author-line {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .author-role {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2.5rem 0;
+    }
+
+    /* ---- FOOTNOTE STYLE MARKERS ---- */
+    sup {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem;
+      color: var(--accent);
+      vertical-align: super;
+      margin-left: 1px;
+    }
+
+    /* ---- FOOTER ---- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    footer p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ---- ANIMATION ---- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .article-hero {
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .article-layout {
+      animation: fadeUp 0.7s 0.15s ease both;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 720px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        order: -1;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .sovereignty-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-name" href="https://houmanasefi.co">Houman Asefi</a>
+      <nav>
+        <ul class="site-nav">
+          <li><a href="#">Essays</a></li>
+          <li><a href="#">Frameworks</a></li>
+          <li><a href="#">SearchFit.ai</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="article-hero">
+    <div class="doc-label">Reference Discussion · AI Economics</div>
+    <h1 class="article-title">Math AI<br></h1>
+    <p class="article-subtitle">Why the nations fail at AI</p>
+    <div class="article-meta">
+      <div class="meta-item">Author <span>Houman Asefi</span></div>
+      <div class="meta-item">Topic <span>AI Economics · Sovereignty</span></div>
+      <div class="meta-item">Type <span>Reference Framework</span></div>
+    </div>
+  </div>
+
+  <!-- LAYOUT -->
+  <div class="article-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Contents</div>
+        <ul class="toc-list">
+          <li><a href="#mental-model">The Mental Model</a></li>
+          <li><a href="#power-map">The Power Map</a></li>
+          <li><a href="#capital">Where Capital Lands</a></li>
+          <li><a href="#renaissance">The Renaissance Proof</a></li>
+          <li><a href="#sovereignty">The Sovereignty Frame</a></li>
+          <li><a href="#window">The Window</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Key Concepts</div>
+        <div class="key-terms">
+          <span class="key-term">Reasoning Infrastructure</span>
+          <span class="key-term">Cognitive Layer</span>
+          <span class="key-term">Formal Proof AGI</span>
+          <span class="key-term">Quant Optimization</span>
+          <span class="key-term">Sovereignty Gap</span>
+          <span class="key-term">Distribution > Product</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-label">Related</div>
+        <ul class="toc-list">
+          <li><a href="#">When Cognition Becomes Cheap</a></li>
+          <li><a href="#">Externalities as AI Moat</a></li>
+          <li><a href="#">National AI Strategy Playbook</a></li>
+        </ul>
+      </div>
+
+    </aside>
+
+    <!-- BODY -->
+    <main class="article-body">
+
+      <div class="opening-statement">
+        The common framing — Math AGI as a productivity tool for researchers — is not just incomplete. It mistakes the instrument for the infrastructure. What is being built is not a calculator for academics. It is the reasoning layer that will sit beneath markets, governments, and resource systems. The question is not whether that layer gets built. It is who controls it.
+      </div>
+
+      <!-- SECTION 1 -->
+      <div class="section" id="mental-model">
+        <div class="section-number">§ 01 — Mental Model</div>
+        <h2>The Infrastructure Stack Nobody Is Mapping</h2>
+
+        <p>Economic infrastructure has always developed in layers, each generation of layer creating the conditions of power for the next. Physical infrastructure — roads, ports, energy grids — determined which polities could sustain trade and project force. Nations that owned this layer operated with structural independence. Those that did not found themselves geographically constrained regardless of their ambitions.</p>
+
+        <p>The digital layer followed the same logic at higher abstraction. Control of internet routing, cloud compute, and telecommunications infrastructure determined which actors could operate at global scale and which operated at the discretion of those who did. The United States ran this transition more or less unchallenged. The political consequences are still unfolding.</p>
+
+        <p>The cognitive layer is the third order. It is the reasoning and optimization infrastructure that allocates resources, prices risk, models complex systems, and coordinates institutional decisions at civilizational scale. This layer is currently under construction. The architectures are immature. The dominant actors are not yet locked in. The window — for nations, for institutions, for serious operators — is open.</p>
+
+        <div class="pull-quote">
+          <p>"Math AGI is not about doing mathematics faster. It is about who controls the reasoning substrate underneath every future economy."</p>
+        </div>
+
+        <p>The mistake most observers make is to see the benchmarks — theorem proving competitions, mathematical olympiad scores, symbolic reasoning tests — and conclude that the application domain is academic. It is not. Mathematics is simply the domain where ground truth is unambiguous and verifiable. It is a training environment, not a destination. The output of these systems is not better mathematics. It is verifiable, hallucination-resistant reasoning that can then be deployed against any domain where decisions carry high stakes and errors are expensive.</p>
+
+        <p>Financial contracts. Regulatory compliance structures. Supply chain failure mode analysis. Legal arbitration. Strategic planning under uncertainty. These are the real application targets. Mathematics is the proving ground.</p>
+      </div>
+
+      <!-- SECTION 2 -->
+      <div class="section" id="power-map">
+        <div class="section-number">§ 02 — Power Map</div>
+        <h2>The Three Camps Building Cognitive Infrastructure</h2>
+
+        <p>Fewer than ten actors globally are engaged at the level that matters. They are not well-described by the public framing of "AI companies." The more useful taxonomy is by the type of reasoning infrastructure each is building and the domain they intend to deploy it against.</p>
+
+        <h3>Camp One: Formal Proof Engines</h3>
+        <p>DeepMind's Alpha systems, Lean-adjacent research efforts, and Axiom-class approaches are publicly understood as automated theorem proving. This framing is accurate but incomplete. What these teams are actually constructing are reasoning architectures trained in environments where correctness is deterministic and verifiable. The significance is not mathematical productivity. It is that a system trained to reason without error in a verifiable domain can, with appropriate fine-tuning, reason without error in any domain where the constraint set is sufficiently well-defined.</p>
+
+        <p>The practical deployment targets are any institution that currently employs large teams of humans to reduce epistemic uncertainty before high-stakes decisions. That is a very large market.</p>
+
+        <h3>Camp Two: Quantitative Optimization AGI</h3>
+        <p>This is the most consequential camp and the least publicly discussed. The silence itself is informative. Quantitative hedge funds — with Renaissance Technologies as the paradigm — defense contractors, and Palantir-class data systems companies have been developing proto-versions of mathematical AGI for decades. The architecture is proven. The current work is scaling it, generalizing it, and moving it up the abstraction stack from trading signals to institutional decision-making infrastructure.</p>
+
+        <p>Nvidia occupies a structurally unique position here. Their GPU architecture is not merely a product. It is the only compute substrate at scale capable of running these systems efficiently. The transition from selling graphics hardware to owning the compute layer of civilization was not accidental. It was a strategic insight that arrived early and was executed with patience.</p>
+
+        <h3>Camp Three: Engineering-Reality AGI</h3>
+        <p>Tesla's autonomous vehicle program is commonly framed as a transportation story. It is more accurately understood as a continuous mathematical optimization problem running against physical reality at scale, generating proprietary feedback loops that no simulator could replicate. The vehicle fleet is, in effect, a training infrastructure that happens to move people.</p>
+
+        <p>Nvidia's Omniverse is the simulation layer — an environment where mathematical AGI systems can be trained against high-fidelity physical reality before deployment. The defense implications are not subtle. A nation that can run faster and more accurate simulations of conflict, resource stress, and strategic interdependency will consistently make better decisions under uncertainty than one that cannot.</p>
+
+        <table class="power-map">
+          <thead>
+            <tr>
+              <th>Actor Class</th>
+              <th>Primary Domain</th>
+              <th>Real Target Market</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Formal Proof AGI<br><small style="color:var(--muted)">DeepMind, Lean-adjacent</small></td>
+              <td>Verifiable reasoning</td>
+              <td>Finance, legal, compliance, strategy</td>
+              <td class="status-active">Active build</td>
+            </tr>
+            <tr>
+              <td>Quant Optimization AGI<br><small style="color:var(--muted)">Quant funds, Palantir, Nvidia</small></td>
+              <td>Market & institutional modeling</td>
+              <td>Capital markets, government, defense</td>
+              <td class="status-active">Mature, scaling</td>
+            </tr>
+            <tr>
+              <td>Engineering-Reality AGI<br><small style="color:var(--muted)">Tesla, Nvidia Omniverse, DARPA</small></td>
+              <td>Physical world optimization</td>
+              <td>Defense, logistics, infrastructure</td>
+              <td class="status-active">Active build</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SECTION 3 -->
+      <div class="section" id="capital">
+        <div class="section-number">§ 03 — Capital Flows</div>
+        <h2>Where the Real Money Lands</h2>
+
+        <p>Three markets. Radically different timelines. The same underlying infrastructure thesis applied across domains of varying urgency and political visibility.</p>
+
+        <h3>Finance: The Immediate Market</h3>
+        <p>The Bloomberg Terminal defined the information layer of capital markets. Whatever entity builds its equivalent for reasoning — the system that does not merely surface data but models optimal decisions across a defined objective function — owns the most valuable institutional seat in capital markets for a generation. This is already understood by the major quant funds. It is not yet understood by most banks, asset managers, or regulators.</p>
+
+        <h3>Energy and Resource Extraction: The Invisible Play</h3>
+        <p>Mining optimization, grid balancing, extraction sequencing, and supply chain routing are pure mathematical optimization problems running on physical constraints. The companies that integrate Math AGI into their operational layer will achieve structural margin advantages that competitors will be unable to explain, let alone match, for years. The advantage will appear as operational excellence. Its source will be invisible. This is the category of asymmetric gain that moves slowly, then suddenly.</p>
+
+        <h3>Government: The Sleeper Market</h3>
+        <p>Governments administer the largest and most complex resource allocation problems in human history. Tax policy, infrastructure prioritization, healthcare distribution, defense posture, monetary supply management — these are optimization problems currently solved by committees of humans operating on intuition, ideology, and incomplete data under time pressure.</p>
+
+        <p>A government that deploys Math AGI against its own decision-making processes will not merely become more efficient. It will gain a compound advantage over every government that does not. Decisions made with better models, updated faster, tested against more scenarios, will produce systematically better outcomes over time. The gap will widen with each iteration.</p>
+
+        <div class="insight-box">
+          <div class="insight-label">Key Observation</div>
+          <p>The government that <em>rents</em> this capability from a private actor will gain some of the advantage while creating a structural dependency. The optimization function will be running — but it will be running according to parameters set by an entity whose incentives are not coextensive with national interest. That is not an efficiency upgrade. It is a slow transfer of decisional sovereignty.</p>
+        </div>
+      </div>
+
+      <!-- SECTION 4 -->
+      <div class="section" id="renaissance">
+        <div class="section-number">§ 04 — Historical Proof</div>
+        <h2>The Renaissance Technologies Precedent</h2>
+
+        <p>The most important proof of concept for Math AGI at scale is thirty years old and hiding in plain sight. Renaissance Technologies, the quantitative hedge fund founded by Jim Simons, did not build a better trading desk. It built a closed-loop mathematical intelligence system that modeled market microstructure with greater fidelity than any human participant — and then ran that advantage systematically, at scale, in near-total silence, for three decades.</p>
+
+        <p>The Medallion Fund is not primarily interesting as an investment vehicle, though its returns are extraordinary by any measure. It is interesting as a proof of concept. It demonstrates what happens when a mathematical reasoning system is deployed against a complex adaptive system — a market populated by intelligent actors — that lacks the capacity to model what it is competing against. The actors who lost to Medallion were not unintelligent. They were operating with fundamentally inferior reasoning infrastructure, and they did not know it.</p>
+
+        <p>The architecture of the next version is identical in structure. The domain is different.</p>
+
+        <div class="pull-quote">
+          <p>"Renaissance didn't extract alpha from markets. It extracted alpha from the gap between its reasoning infrastructure and everyone else's. That gap is about to exist at civilizational scale."</p>
+        </div>
+
+        <p>Mathematical AGI at national scale does not trade financial instruments. It simulates economies — running thousands of policy scenarios against real constraint sets, updating in response to new data, identifying the decision paths most likely to achieve defined national objectives. It models climate risk not as a reporting obligation but as a resource allocation and infrastructure investment problem with fifty-year decision horizons. It runs real-time optimization across competing national priorities: growth, stability, security, equity, sovereignty.</p>
+
+        <p>The nations that build or seriously partner to own this layer will make systematically better decisions under uncertainty than those that do not. The compounding effect of better decisions, over time, in complex systems, is not linear. It is the difference between players operating in the same game with different quality models of that game.</p>
+      </div>
+
+      <!-- SECTION 5 -->
+      <div class="section" id="sovereignty">
+        <div class="section-number">§ 05 — The Core Frame</div>
+        <h2>The Sovereignty Matrix</h2>
+
+        <p>The clearest way to understand the stakes is to map the positions available to nations as the cognitive layer matures. There are four positions. Each has different implications for strategic agency, which compounds differently over time.</p>
+
+        <div class="sovereignty-grid">
+          <div class="sovereignty-cell header-cell">
+            <div class="cell-label">Position</div>
+            <div class="cell-title">Owns the Layer</div>
+            <div class="cell-desc" style="color: rgba(245,241,234,0.6)">Builds and controls the reasoning infrastructure domestically</div>
+          </div>
+          <div class="sovereignty-cell">
+            <div class="cell-label">Implication</div>
+            <div class="cell-title">Full Strategic Agency</div>
+            <div class="cell-desc">Autonomous decision-making across economic, military, and resource domains. The optimization function serves national objectives directly.</div>
+          </div>
+          <div class="sovereignty-cell header-cell">
+            <div class="cell-label">Position</div>
+            <div class="cell-title">Accesses via Ally</div>
+            <div class="cell-desc" style="color: rgba(245,241,234,0.6)">Deep partnership with a nation that owns the layer</div>
+          </div>
+          <div class="sovereignty-cell">
+            <div class="cell-label">Implication</div>
+            <div class="cell-title">Bounded Agency</div>
+            <div class="cell-desc">Real capability, real constraint. Strategic options are a function of the relationship. Functional but dependent.</div>
+          </div>
+          <div class="sovereignty-cell danger">
+            <div class="cell-label">Position</div>
+            <div class="cell-title">Rents from Private Actors</div>
+            <div class="cell-desc" style="color: var(--muted)">Purchases reasoning-as-a-service from private technology companies</div>
+          </div>
+          <div class="sovereignty-cell">
+            <div class="cell-label">Implication</div>
+            <div class="cell-title">Incremental Sovereignty Transfer</div>
+            <div class="cell-desc">The optimization function is live but serves external interests. Dependency grows. Reversibility decreases. The gap is understood only after it is too late to close.</div>
+          </div>
+          <div class="sovereignty-cell danger">
+            <div class="cell-label">Position</div>
+            <div class="cell-title">Does Not Engage</div>
+            <div class="cell-desc" style="color: var(--muted)">Continues operating on 20th century decision infrastructure</div>
+          </div>
+          <div class="sovereignty-cell">
+            <div class="cell-label">Implication</div>
+            <div class="cell-title">Compounding Disadvantage</div>
+            <div class="cell-desc">Makes decisions using legacy tools against adversaries running superior models. The gap compounds with each decision cycle. Recovery becomes structurally improbable.</div>
+          </div>
+        </div>
+
+        <p>This is not primarily a technology story in the conventional sense. The technology is the mechanism. The story is about which actors control the infrastructure through which future economic and political decisions are filtered, optimized, and executed. Infrastructure stories always resolve the same way: the actors who own the foundational layer extract rent from every actor who does not — in perpetuity, or until the layer is superseded.</p>
+
+        <p>There is no historical precedent for a civilization-level reasoning infrastructure being built and then freely shared with everyone. Roads were taxed. Cables were monopolized. Cloud infrastructure is priced. The cognitive layer will not be different.</p>
+      </div>
+
+      <!-- SECTION 6 -->
+      <div class="section" id="window">
+        <div class="section-number">§ 06 — The Window</div>
+        <h2>On Timing and the Nature of This Particular Moment</h2>
+
+        <p>The number of actors engaged at the level that determines outcomes in this race is small. The academic consensus estimate, for those tracking it closely, is fewer than ten entities globally that have both the technical capability and the resource depth to build and own a significant position in the cognitive layer. The gap between these actors and the broader field is already significant and accelerating in the manner of compound growth rather than linear accumulation.</p>
+
+        <p>The window for engagement as a principal — as a builder or serious strategic partner rather than a customer — is a function of how quickly the dominant architectures lock in and how quickly pricing power consolidates around them. Infrastructure markets have historically followed a predictable pattern: a period of relatively open competition, a phase transition as standards and dominant actors emerge, and then a long tail of consolidation during which the cost of entry rises faster than the value of participation.</p>
+
+        <p>We are in the open competition phase. It will not last indefinitely. The phase transition is not decades away.</p>
+
+        <div class="insight-box">
+          <div class="insight-label">The Strategic Question</div>
+          <p>The decision that appears optional today — to engage seriously with the cognitive infrastructure layer, to build or partner or at minimum develop a coherent strategic position — becomes progressively less optional as the infrastructure matures. The actors who engage now are setting the terms. The actors who engage later are accepting them. The actors who do not engage will not be asked.</p>
+        </div>
+
+        <p>History does not remember who studied the map. It remembers who moved first, who moved well, and who was still debating the merits of motion when the territory had already been divided.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="article-closing">
+        <p>This is a reference discussion, not a prediction. The trajectories described here are structural, not certain. They follow from the logic of infrastructure economics, the documented behavior of incumbent actors, and the historical pattern of technology-layer transitions. What follows from them in practice will be shaped by political decisions, regulatory choices, and the contingency of individual actors who happen to understand what they are building before the market catches up.</p>
+        <p style="margin-top:1rem;">That contingency is the window.</p>
+        <div class="author-line">
+          <div>
+            <div class="author-name">Houman Asefi</div>
+            <div class="author-role" style="margin-top:0.2rem;">Full-Stack Capitalist · houmanasefi.co</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>© Houman Asefi · houmanasefi.co · All frameworks and analyses are original independent work</p>
+  </footer>
+
+</body>
+</html>
