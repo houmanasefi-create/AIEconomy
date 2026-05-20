@@ -1,615 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Compute Allocation Is Governance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compute Allocation Is Governance</title>
 </head>
 <body>
-  <h1>Compute Allocation Is Governance</h1>
 
-  <h2>Executive summary</h2>
+<h1>Compute Allocation Is Governance</h1>
 
-  <p>The strongest 2025–present shift in AI governance is not a new ethics principle. It is the move from governing models in the abstract to governing the material conditions under which models can be built, deployed, and diffused. The literature increasingly treats compute as a governance primitive because allocation decisions determine who gets frontier capability, who gets latency-sensitive inference, which jurisdictions host the stack, which firms capture rents, which sectors are crowded in or out, and which grids, water systems, and local communities absorb the physical burden. That is governance in the hard sense: shaping the feasible set, not just writing norms about behavior inside it.</p>
+<p>For most of the internet era, governance discussions focused on speech.</p>
 
-  <p>From 2025 onward, the literature converges around five ideas. First, compute is measurable enough to support policy, though imperfectly. Second, sovereignty is layered: territory, cloud ownership, and accelerator provenance do not line up cleanly. Third, concentration in chips, cloud, and data-center infrastructure is now a first-order competition problem. Fourth, energy, permitting, and capital are no longer side constraints; they are central allocative bottlenecks. Fifth, verification remains the weak link: the hardware-level mechanisms most useful for treaty-grade assurance are still immature.</p>
+<p>Content moderation.</p>
 
-  <p>International bodies have also moved. The UN process now explicitly links AI inclusion to affordable computing power and capacity building; the OECD is measuring domestic AI cloud capacity and warning about infrastructure concentration; the EU is building AI Factories and Gigafactories as sovereignty instruments; the G7 has moved transparency reporting into an operational framework; the ITU is naming governance of compute and models outright; and the IEA has put numbers on the electricity consequences.</p>
+<p>Privacy.</p>
 
-  <p>Major labs are saying the quiet part out loud. OpenAI now frames AI infrastructure as sovereignty and national development capacity; Anthropic argues for export controls to preserve compute advantage; Google pairs responsible AGI language with sovereign AI and infrastructure reporting; Meta argues that open hardware and interoperable infrastructure are strategic necessities for scaling AI. None of that is a sideshow to governance. It is governance.</p>
+<p>Platform behavior.</p>
 
-  <p>Bottom line: compute allocation is governance is not a metaphor. It is a better description of what the most consequential AI governance decisions already are. The serious policy question is no longer whether compute should be governed, but how to allocate it across frontier labs, public-interest research, enterprise adoption, and traditional sectors without drifting into cartelization, geopolitical fragmentation, energy backlash, or unverifiable theater.</p>
+<p>Algorithms.</p>
 
-  <h2>Compute as a governance primitive</h2>
+<p>Terms of service.</p>
 
-  <p>A useful 2025–2026 definition is this: compute allocation is the institutional process by which access to AI-relevant chips, cloud regions, supercomputers, energy, networking, and physical hosting capacity is distributed across actors, tasks, and jurisdictions. If governance is the shaping of who can do what, when, where, and under what constraints, then compute allocation is governance because it sets the production possibility frontier for AI capability and diffusion.</p>
+<p>The assumption underneath all of those debates was that digital systems were fundamentally informational.</p>
 
-  <p>The best mental model is not AI policy as model rules, but AI policy as stack allocation. The relevant stack runs from semiconductor supply chains, racks, and colocation sites up through clouds, APIs, and enterprise access controls. The 2026 hardware-governance taxonomy frames compute as especially governable because it is detectable, excludable, and quantifiable relative to alternatives like data or algorithms. The 2025 sovereignty literature adds that control can sit at different layers at once, so domestic compute can still be foreign-owned, foreign-operated, or dependent on foreign accelerators.</p>
+<p>But AI is changing the center of gravity.</p>
 
-  <p>The cleanest operational decomposition comes from the 2025 compute-sovereignty paper: governments need to ask three separate questions. How much AI compute sits on national territory. Who owns and governs the cloud providers operating that compute. And whose accelerators power it. Those are different policy levers and they lead to different trade-offs. A country can increase territorial supply security while remaining dependent on external cloud and chip vendors, and it can do so while increasing local energy, water, and land pressures.</p>
+<p>The most important AI governance questions are increasingly becoming physical questions.</p>
 
-  <p>The broader development lens from the World Bank is useful here. Its 2025 four Cs framework treats compute as one of the foundations of AI ecosystems, alongside connectivity, context, and competency. That is more realistic than frontier-only discourse. In practice, allocation policy is not just about stopping dangerous training runs. It is also about deciding whether startups, public services, schools, hospitals, industrial firms, and research institutions can actually get enough affordable, lawful, and reliable compute to use AI productively.</p>
+<p>Questions about energy.</p>
 
-  <p>One reason the allocation framing matters is that compute is rationed through many channels that do not look like AI regulation at first glance: export controls, cloud service terms, queue priority at hyperscalers and neoclouds, datacenter permitting, utility interconnection, capital availability, sovereign-cloud procurement rules, and internal enterprise quotas for expensive GPU usage. Once you see those as allocative institutions, the governance picture gets clearer.</p>
+<p>Questions about chips.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Mental model</th>
-      <th>What is being governed</th>
-      <th>Primary instrument classes</th>
-      <th>Why it matters</th>
-    </tr>
-    <tr>
-      <td>Compute as a choke point</td>
-      <td>Frontier training and high-scale inference</td>
-      <td>Threshold reporting, export controls, licensing, cloud monitoring</td>
-      <td>Makes capability growth legible enough to regulate, at least partly.</td>
-    </tr>
-    <tr>
-      <td>Compute as sovereignty</td>
-      <td>Territorial access, ownership, accelerator dependence</td>
-      <td>Sovereign cloud, public compute, AI factories, national procurement</td>
-      <td>Separates having datacenters from actually controlling the stack.</td>
-    </tr>
-    <tr>
-      <td>Compute as an industrial bottleneck</td>
-      <td>Infrastructure concentration and vertical leverage</td>
-      <td>Competition policy, interoperability, public investment, open hardware</td>
-      <td>Prevents the AI stack from collapsing into a few gatekeepers.</td>
-    </tr>
-    <tr>
-      <td>Compute as a public utility problem</td>
-      <td>Grid capacity, water, land, finance, resilience</td>
-      <td>Energy planning, siting, tariffs, community compacts, permitting reform</td>
-      <td>Links AI expansion to real physical-system constraints.</td>
-    </tr>
-  </table>
+<p>Questions about datacenters.</p>
 
-  <h2>Literature and institutional landscape since 2025</h2>
+<p>Questions about electrical grids.</p>
 
-  <p>The table below is a best-effort, high-signal survey of major English-language sources published in 2025 or later that bear directly on the thesis that compute allocation is a governance primitive. It is not literally exhaustive, but it covers the core primary and official sources that keep reappearing across the debate.</p>
+<p>Questions about capital allocation.</p>
 
-  <h3>Annotated survey of essays, papers, and reports</h3>
+<p>Questions about access.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Year</th>
-      <th>Source</th>
-      <th>Type</th>
-      <th>What it contributes</th>
-      <th>Why it matters for the thesis</th>
-      <th>Reference</th>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Haydn Belfield, Domestic frontier AI regulation, an IAEA for AI, an NPT for AI, and a US-led Allied Public-Private Partnership for AI</td>
-      <td>arXiv preprint</td>
-      <td>Proposes compute-indexed domestic regulation, data-center usage reports, an International AI Agency analogue, and a secure-chips non-proliferation regime.</td>
-      <td>Makes compute the backbone for domestic and international institutional design.</td>
-      <td>https://arxiv.org/abs/2507.06379</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Ananthi Al Ramiah et al., Toward a Global Regime for Compute Governance</td>
-      <td>arXiv preprint</td>
-      <td>Organizes compute governance around technical, traceability, and regulatory levers under a Governance–Enforcement–Verification framework.</td>
-      <td>One of the clearest 2025 statements that compute is the material lever for global coordination.</td>
-      <td>https://arxiv.org/abs/2506.20530</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Zoe Jay Hawkins, Vili Lehdonvirta, Boxi Wu, AI Compute Sovereignty</td>
-      <td>SSRN working paper</td>
-      <td>Breaks sovereignty into territory, cloud-provider nationality, and accelerator nationality; shows the trade-offs among them.</td>
-      <td>Kills the simplistic more domestic datacenters equals sovereignty story.</td>
-      <td>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5312977</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Alvin Moon et al., Strategies and Detection Gaps in a Game-Theoretic Model of Compute Governance</td>
-      <td>RAND report</td>
-      <td>Shows FLOP-threshold monitoring has detection gaps and should be paired with non-compute governance.</td>
-      <td>Crucial corrective: compute is governable, but not cleanly or completely.</td>
-      <td>https://www.rand.org/pubs/research_reports/RRA3686-1.html</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Vili Lehdonvirta et al., Measuring domestic public cloud compute availability for AI</td>
-      <td>OECD working paper</td>
-      <td>Builds a methodology to track the geography of public-cloud AI compute.</td>
-      <td>If allocation is governance, measurement is the first prerequisite.</td>
-      <td>https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Competition in artificial intelligence infrastructure</td>
-      <td>OECD policy paper</td>
-      <td>Maps concentration, vertical integration, crossholdings, state intervention, and pro-competition remedies including public compute and open-source investment.</td>
-      <td>Moves the debate from safety-only to market-structure governance.</td>
-      <td>https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/competition-in-artificial-intelligence-infrastructure_69319aee/623d1874-en.pdf</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Peter Barnett, Compute Requirements for Algorithmic Innovation in Frontier AI Models</td>
-      <td>arXiv / OpenReview</td>
-      <td>Argues some compute caps could still permit many historically important algorithmic innovations.</td>
-      <td>Important warning against naïve cap the GPUs and you cap progress assumptions.</td>
-      <td>https://arxiv.org/pdf/2507.10618 and https://openreview.net/forum?id=ozZP09H4Ep</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Digital Progress and Trends Report 2025: AI Foundations</td>
-      <td>World Bank report</td>
-      <td>Frames AI development around the four Cs, explicitly including compute.</td>
-      <td>Broadens compute governance from frontier control to inclusive development policy.</td>
-      <td>https://www.worldbank.org/en/publication/dptr2025-ai-foundations</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Energy and AI</td>
-      <td>IEA analysis</td>
-      <td>Quantifies the electricity implications of AI-driven data-center growth over the next decade.</td>
-      <td>Makes clear that compute allocation is inseparable from energy governance.</td>
-      <td>https://www.iea.org/reports/energy-and-ai</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>Christine Lagarde, The transformative power of AI: Europe’s moment to act</td>
-      <td>ECB speech</td>
-      <td>Says compute capacity is a real constraint, but diffusion can still occur on existing hardware; argues Europe needs minimum compute capacity and diversified supply.</td>
-      <td>Strong official statement that diffusion and sovereignty are allocation problems.</td>
-      <td>https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251124_1~c239fb4a7f.en.html</td>
-    </tr>
-    <tr>
-      <td>2025</td>
-      <td>McKinsey, The cost of compute: A $7 trillion race to scale data centers</td>
-      <td>Industry analysis</td>
-      <td>Offers scenario-based capex estimates for AI datacenter expansion through 2030.</td>
-      <td>Useful for sizing the economic stakes and the risk of misallocation.</td>
-      <td>https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers</td>
-    </tr>
-    <tr>
-      <td>2026</td>
-      <td>Samar Ansari, Hardware-Level Governance of AI Compute</td>
-      <td>arXiv preprint</td>
-      <td>Taxonomy of 20 hardware governance mechanisms, feasibility ratings, and scenario mapping.</td>
-      <td>Probably the clearest 2026 paper on the gap between policy ambition and engineering readiness.</td>
-      <td>https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-    <tr>
-      <td>2026</td>
-      <td>Financing the AI boom: from cash flows to debt</td>
-      <td>BIS bulletin</td>
-      <td>Links AI infrastructure expansion to evolving debt and private-credit structures.</td>
-      <td>Shows compute allocation is also a capital-allocation and financial-stability problem.</td>
-      <td>https://www.bis.org/publ/bisbull120.pdf</td>
-    </tr>
-  </table>
+<p>Questions about infrastructure.</p>
 
-  <h3>Positions from international bodies and major labs</h3>
+<p>And underneath all of those questions sits one increasingly unavoidable reality:</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Actor</th>
-      <th>2025–present position</th>
-      <th>Why it matters</th>
-      <th>Reference</th>
-    </tr>
-    <tr>
-      <td>UN</td>
-      <td>The UN process now frames AI inclusion partly as a capacity problem: guardrails, interoperability, and capacity-building should include skills, data, affordable computing power, and a Global Dialogue plus Scientific Panel.</td>
-      <td>This is the clearest multilateral move toward treating compute access as part of global governance, not just industrial policy.</td>
-      <td>https://india.un.org/en/310321-india-ai-impact-summit-un-chief-says-ai-%E2%80%9Cmust-belong-everyone%E2%80%9D ; https://india.un.org/en/300656-secretary-general-welcomes-unga-decision-establish-new-mechanisms-promoting-international ; https://dprk.un.org/en/287452-secretary-general-address-2025-priorities</td>
-    </tr>
-    <tr>
-      <td>OECD</td>
-      <td>OECD now has a dedicated AI-compute policy track, measurement work on domestic public-cloud AI compute, and competition analysis of AI infrastructure.</td>
-      <td>The OECD is turning compute from a vague bottleneck into a measurable, policy-trackable variable.</td>
-      <td>https://www.oecd.org/en/topics/ai-compute.html ; https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html ; https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/competition-in-artificial-intelligence-infrastructure_69319aee/623d1874-en.pdf</td>
-    </tr>
-    <tr>
-      <td>EU</td>
-      <td>The AI Continent Action Plan, AI Factories, AI Gigafactories, and Apply AI Strategy all treat compute infrastructure as tied to competitiveness, sovereignty, and adoption.</td>
-      <td>The EU has effectively operationalized compute governance as industrial policy plus diffusion policy.</td>
-      <td>https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan ; https://digital-strategy.ec.europa.eu/en/policies/ai-factories ; https://digital-strategy.ec.europa.eu/en/policies/apply-ai</td>
-    </tr>
-    <tr>
-      <td>G7</td>
-      <td>The OECD-launched Hiroshima AI Process reporting framework moved into an operational reporting cycle in 2025 that standardizes transparency on advanced AI risk management.</td>
-      <td>Not compute regulation per se, but a step toward interoperable governance of the high-end ecosystem that consumes the most strategic compute.</td>
-      <td>https://oecd.ai/en/wonk/how-the-g7s-new-ai-reporting-framework-could-shape-the-future-of-ai-governance</td>
-    </tr>
-    <tr>
-      <td>ITU</td>
-      <td>The 2025 co-chairs statement explicitly names governance of compute and models, linking access, risk assessment, and accountability.</td>
-      <td>This is unusually direct language from an international standards-adjacent forum.</td>
-      <td>https://www.itu.int/en/mediacentre/Documents/2025/statement-co-chairs-on-AI-governance-dialogue-2025.pdf</td>
-    </tr>
-    <tr>
-      <td>IEA</td>
-      <td>The IEA’s 2025 and 2026 analyses quantify AI/datacenter electricity demand and keep updating growth figures.</td>
-      <td>Any compute-governance regime that ignores grid and generation constraints is fake.</td>
-      <td>https://www.iea.org/reports/energy-and-ai/executive-summary ; https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions ; https://www.iea.org/reports/energy-and-ai/energy-supply-for-ai</td>
-    </tr>
-    <tr>
-      <td>OpenAI</td>
-      <td>OpenAI argues that infrastructure is destiny, promotes in-country datacenter buildouts through OpenAI for Countries, and backs sovereign compute in Europe and Australia. Some capacity figures remain early-stage or unspecified.</td>
-      <td>OpenAI is explicitly making infrastructure access part of geopolitical and developmental strategy.</td>
-      <td>https://openai.com/global-affairs/openai-for-countries/ ; https://cdn.openai.com/global-affairs/9c98a71f-7d2f-4566-9da7-4a7628c60bea/oai-ideas-to-power-democratic-ai-june-2025.pdf ; https://cdn.openai.com/global-affairs/61b341bc-56eb-46dc-b356-a621e02cb82d/openai-australia-economic-blueprint-july-2025.pdf ; https://openai.com/global-affairs/eu-code-of-practice/</td>
-    </tr>
-    <tr>
-      <td>Anthropic</td>
-      <td>Anthropic argues that U.S. compute advantage should be preserved via export controls, stronger enforcement, and tighter restrictions on advanced chips and some model weights; its RSP keeps governance tightly linked to catastrophic-risk thresholds.</td>
-      <td>Anthropic’s position is the clearest major-lab argument that compute allocation is national-security governance.</td>
-      <td>https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule ; https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf ; https://anthropic.com/responsible-scaling-policy/rsp-v3-0</td>
-    </tr>
-    <tr>
-      <td>Google and Google DeepMind</td>
-      <td>Google emphasizes Sovereign Cloud and Sovereign AI and measures infrastructure overhead in AI inference; Google DeepMind emphasizes readiness and proactive risk assessment for AGI. Google’s State of AI Infrastructure report says 98% of organizations are exploring gen AI and 39% are already in production; survey fieldwork date is unspecified on the landing page.</td>
-      <td>The combined message is that diffusion depends on secure, compliant infrastructure, not just model quality.</td>
-      <td>https://blog.google/company-news/outreach-and-initiatives/public-policy/ai-turning-ambition-into-action/ ; https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/ ; https://cloud.google.com/resources/content/state-of-ai-infrastructure ; https://deepmind.google/blog/taking-a-responsible-path-to-agi/</td>
-    </tr>
-    <tr>
-      <td>Meta</td>
-      <td>Meta argues for open hardware, standardization, and large-scale AI datacenter build-out, while its latest scaling framework tightens preparedness around advanced models.</td>
-      <td>Meta’s public posture treats infrastructure design and interoperability as core governance variables.</td>
-      <td>https://about.fb.com/news/2025/10/open-hardware-future-data-center-infrastructure/ ; https://about.fb.com/news/2025/10/metas-new-ai-optimized-data-center-el-paso/ ; https://ai.meta.com/blog/scaling-how-we-build-test-advanced-ai/ ; https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2</td>
-    </tr>
-  </table>
+<p><strong>Compute allocation is governance.</strong></p>
 
-  <p>The important synthesis is that these actors are not offering one shared doctrine. They are converging on one shared arena: access to compute infrastructure. The disagreement is over purpose. International bodies lean toward inclusion, interoperability, and safety. Labs lean toward sovereignty, security, access control, or open infrastructure, depending on business model. Those are not separate debates. They are rival answers to the same allocative question.</p>
+<p>Not metaphorically.</p>
 
-  <h2>Sector impacts and case studies</h2>
+<p>Operationally.</p>
 
-  <p>The practical proof of the thesis sits outside frontier-lab discourse. If compute allocation is governance, it should show up in sectoral operations. It does. In nearly every sector, the question is some version of: who gets priority access to expensive compute, at what reliability, under which compliance regime, with what local energy footprint, and for which use cases.</p>
+<p>Because once intelligence becomes industrialized, the allocation of computational capacity begins shaping who can participate in the future economy and under what conditions.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Actor or sector</th>
-      <th>Case</th>
-      <th>Opportunity</th>
-      <th>Hard constraint</th>
-      <th>Governance implication</th>
-      <th>Reference</th>
-    </tr>
-    <tr>
-      <td>Frontier labs and hyperscalers</td>
-      <td>OpenAI country programs, Anthropic export-control advocacy, Meta’s AI datacenter build-out</td>
-      <td>Faster model development, national partnerships, local ecosystem effects</td>
-      <td>Chips, power, siting, security, and sovereign-control demands</td>
-      <td>Frontier compute is now jointly governed by geopolitics, industrial policy, and infrastructure finance.</td>
-      <td>https://openai.com/global-affairs/openai-for-countries/ ; https://cdn.openai.com/global-affairs/9c98a71f-7d2f-4566-9da7-4a7628c60bea/oai-ideas-to-power-democratic-ai-june-2025.pdf ; https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule ; https://about.fb.com/news/2025/10/metas-new-ai-optimized-data-center-el-paso/</td>
-    </tr>
-    <tr>
-      <td>General enterprise</td>
-      <td>Google Cloud’s 2025 infrastructure survey</td>
-      <td>Broad enterprise uptake, more production deployment</td>
-      <td>Data quality, security, distributed infrastructure, cost</td>
-      <td>Enterprise AI success depends less on frontier access than on governed internal allocation and secure workflows.</td>
-      <td>https://cloud.google.com/resources/content/state-of-ai-infrastructure</td>
-    </tr>
-    <tr>
-      <td>Mining</td>
-      <td>BHP uses digital twins plus GenAI for decision-making; its copper analysis also frames AI datacenters as a major upstream demand driver</td>
-      <td>Better planning and faster geological interpretation; rising demand for copper and related inputs</td>
-      <td>Remote operations, integration of legacy data, and compute-intensive simulation; as supplier, energy/material bottlenecks matter</td>
-      <td>Mining is both an AI adopter and a supplier to the compute build-out, so it sits on both sides of the governance equation.</td>
-      <td>https://www.bhp.com/news/bhp-insights/2025/02/the-role-of-digital-twins-and-ai-in-enhancing-decision-making-in-the-mining-industry ; https://www.bhp.com/es/news/bhp-insights/2025/01/why-ai-tools-and-data-centres-are-driving-copper-demand</td>
-    </tr>
-    <tr>
-      <td>Aviation</td>
-      <td>ICAO paper, plus Airbus and Boeing examples</td>
-      <td>Predictive maintenance, simulation, defect detection, turnaround optimization</td>
-      <td>Certification, explainability, continuous monitoring, human-in-the-loop requirements</td>
-      <td>Aviation shows that compute access is necessary but not sufficient; regulated sectors require compute plus assurance.</td>
-      <td>https://www.icao.int/sites/default/files/Meetings/a42/Documents/WP/wp_489_en.pdf ; https://www.airbus.com/en/newsroom/stories/2025-04-digital-twins-accelerating-aerospace-innovation-from-design-to-operations ; https://www.boeing.com/innovation/innovation-quarterly/2025/12/shaping-ai-for-the-sky</td>
-    </tr>
-    <tr>
-      <td>FMCG</td>
-      <td>Unilever uses AI in seasonal supply chains and digital product twins; Nestlé uses brand twins and generative AI for packaging innovation</td>
-      <td>Faster content creation, reduced waste, better planning, product innovation</td>
-      <td>Data integration across global operations, brand-control, and ROI discipline</td>
-      <td>In most consumer sectors, governance is about allocating modest but reliable compute to many workflows, not winning the frontier race.</td>
-      <td>https://www.unilever.com/news/news-search/2025/how-ai-is-transforming-unilever-ice-creams-end-to-end-supply-chain/ ; https://www.unilever.com/news/press-and-media/press-releases/2025/unilever-reinvents-product-shoots-with-digital-twins-and-ai/ ; https://www.nestle.com/media/news/brands-ai-digital-twins-content-service ; https://www.nestle.com/about/research-development/news/ibm-ai-powered-sustainable-packaging</td>
-    </tr>
-    <tr>
-      <td>Finance</td>
-      <td>JPMorganChase democratized internal access via LLM Suite; official finance institutions warn of AI-infrastructure funding and diffusion issues</td>
-      <td>Productivity gains, internal automation, broader employee experimentation</td>
-      <td>Secure data environments, model risk controls, regulatory scrutiny, and infrastructure modernization</td>
-      <td>Finance needs governed access tiers, audit logs, and internal allocation discipline more than raw frontier scale.</td>
-      <td>https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmc-2025-investor-day/full-transcript.pdf ; https://www.bis.org/publ/bisbull120.pdf ; https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251124_1~c239fb4a7f.en.html</td>
-    </tr>
-    <tr>
-      <td>Energy</td>
-      <td>The U.S. Department of Energy is siting AI datacenter projects on federal lands while the IEA quantifies power demand growth</td>
-      <td>New generation investment, grid modernization, energy-tech innovation</td>
-      <td>Interconnection delays, firm power, regional load spikes, water, local opposition</td>
-      <td>Compute governance without energy-system planning is fantasy; the datacenter queue is an energy governance queue.</td>
-      <td>https://www.energy.gov/articles/doe-announces-site-selection-ai-data-center-and-energy-infrastructure-development-federal ; https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand ; https://www.energy.gov/topics/artificial-intelligence ; https://www.iea.org/reports/energy-and-ai/executive-summary</td>
-    </tr>
-  </table>
+<p>This essay does not argue that there is one perfect model for compute governance.</p>
 
-  <p>The sector pattern is consistent. Frontier labs care about sovereignty, security, and scale. Enterprises care about governed access, cost, and controls. Traditional sectors care about workflow fit, reliability, and regulation. Energy systems care about load, siting, and financing. That means one compute-governance architecture will not fit all actors. Allocation has to be tiered.</p>
+<p>There is not.</p>
 
-  <h3>Traps and failure modes</h3>
+<p>The objective here is exploratory.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Failure mode</th>
-      <th>What breaks</th>
-      <th>Why it is plausible now</th>
-      <th>Why it matters</th>
-      <th>Reference</th>
-    </tr>
-    <tr>
-      <td>Capability-proxy drift</td>
-      <td>Compute thresholds stop tracking dangerous capability well enough</td>
-      <td>Algorithmic innovation and efficiency gains can reduce the compute needed for important advances</td>
-      <td>Static thresholds become stale and can create both loopholes and false comfort</td>
-      <td>https://www.rand.org/pubs/research_reports/RRA3686-1.html ; https://arxiv.org/pdf/2507.10618 ; https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-    <tr>
-      <td>Detection gaps</td>
-      <td>Authorities miss large or distributed training runs</td>
-      <td>RAND shows threshold-only monitoring can fail; hardware verification is immature</td>
-      <td>Monitoring becomes performative rather than effective</td>
-      <td>https://www.rand.org/pubs/research_reports/RRA3686-1.html ; https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-    <tr>
-      <td>Infrastructure concentration</td>
-      <td>A few firms control chips, cloud, networking, and financing</td>
-      <td>OECD identifies concentration, vertical integration, and crossholdings across the stack</td>
-      <td>Access can be foreclosed or priced discriminatorily</td>
-      <td>https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/competition-in-artificial-intelligence-infrastructure_69319aee/623d1874-en.pdf</td>
-    </tr>
-    <tr>
-      <td>Sovereignty theater</td>
-      <td>Governments buy prestige datacenters without meaningful control</td>
-      <td>Sovereignty differs across territory, cloud ownership, and accelerator provenance</td>
-      <td>Public money may buy dependency branded as independence</td>
-      <td>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5312977</td>
-    </tr>
-    <tr>
-      <td>Energy and siting backlash</td>
-      <td>Communities and grids push back on rapid build-outs</td>
-      <td>IEA and DOE both describe steep demand growth and regional grid stress</td>
-      <td>Delays, moratoria, cost spikes, and legitimacy loss</td>
-      <td>https://www.iea.org/reports/energy-and-ai/executive-summary ; https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand ; https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions</td>
-    </tr>
-    <tr>
-      <td>Overbuilding and financing fragility</td>
-      <td>Capital outruns real utilization or payoff</td>
-      <td>BIS ties the boom to debt and private credit; capex projections are huge and uncertain</td>
-      <td>Stranded assets and spillovers into credit markets become real risks</td>
-      <td>https://www.bis.org/publ/bisbull120.pdf ; https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers</td>
-    </tr>
-    <tr>
-      <td>Standards lag</td>
-      <td>Policy assumes hardware attestation that industry cannot yet deliver</td>
-      <td>The 2026 hardware taxonomy finds the most verification-relevant tools least mature</td>
-      <td>Treaty-grade compute governance may arrive too late without targeted R&amp;D</td>
-      <td>https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-  </table>
+<p>To examine the competing mental models forming around compute allocation.</p>
 
-  <h2>Scenarios, traps, and the economic model</h2>
+<p>To explore where different experts fundamentally disagree.</p>
 
-  <p>The next 10 to 20 years will be defined less by whether AI gets bigger and more by how compute gets rationed. The scenario table below is an analytical synthesis, not a forecast from any one source. The probabilities are judgment calls informed by current evidence on sovereignty, infrastructure concentration, export-control politics, energy bottlenecks, and hardware-verification maturity.</p>
+<p>To understand the tradeoffs.</p>
 
-  <h3>Scenario matrix for 2035–2045</h3>
+<p>And to examine the possibility that the most important AI governance decisions may ultimately be infrastructure decisions rather than software decisions.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Scenario</th>
-      <th>Probability</th>
-      <th>Core pattern</th>
-      <th>Main drivers</th>
-      <th>What compute allocation looks like</th>
-    </tr>
-    <tr>
-      <td>Managed scarcity</td>
-      <td>35%</td>
-      <td>States and large firms accept compute as critical infrastructure and build mixed public-private allocation systems</td>
-      <td>Grid constraints, datacenter politics, safety rules, demand growth</td>
-      <td>Frontier training is licensed and monitored; public-interest and SME carve-outs emerge; utilities and regulators gain more say.</td>
-    </tr>
-    <tr>
-      <td>Bloc sovereignty</td>
-      <td>30%</td>
-      <td>U.S.-aligned, China-aligned, and EU/partner ecosystems partially decouple</td>
-      <td>Export controls, national-security logic, sovereignty policy, industrial subsidies</td>
-      <td>Territorial hosting matters more; accelerator origin and cloud nationality become hard policy variables; cross-border portability falls.</td>
-    </tr>
-    <tr>
-      <td>Oligopoly with access markets</td>
-      <td>20%</td>
-      <td>A small number of vertically integrated firms dominate, but states impose selective transparency and competition remedies</td>
-      <td>Scale economies, financing advantages, vertical integration</td>
-      <td>Access is mostly commercial and contractual; governments intervene mainly at the margins.</td>
-    </tr>
-    <tr>
-      <td>Efficiency shock and distributed inference</td>
-      <td>15%</td>
-      <td>Model and hardware efficiency improve fast enough that scarce frontier training remains concentrated but inference diffuses widely</td>
-      <td>Algorithmic progress, specialized accelerators, edge compute</td>
-      <td>Governance shifts from scarce training allocation toward audit, provenance, and secure sectoral deployment.</td>
-    </tr>
-  </table>
+<h2>The Shift From Software Governance To Infrastructure Governance</h2>
 
-  <p>The high-probability scenarios are not utopian. The likely medium-term world is one where governments do not nationalize compute, but they do stop treating it like a neutral background service. The boundary between industrial policy, platform regulation, infrastructure planning, and AI safety keeps dissolving.</p>
+<p>Traditional software governance focused on behavior inside systems.</p>
 
-  <h3>A formal economic model for compute allocation</h3>
+<p>AI governance increasingly focuses on access to systems themselves.</p>
 
-  <p>A useful formalization is to treat compute as a scarce, regulated input allocated across actors i in the set 1 to N over periods t.</p>
+<p>That distinction matters enormously.</p>
 
-  <p>Let c(i,t) equal compute allocated to actor i in period t. Let e(i) equal electricity intensity per unit of compute for actor i. Let a(i,t) equal assurance or compliance effort. Let A(i,t) equal actor-specific technical productivity. Let q(i,t) equal capability or output generated by compute. Let R(i)(q(i,t)) equal private or social revenue from that output. Let rho(i)(q(i,t), a(i,t)) equal risk externality. Let Psi(t) equal concentration cost. Let Sigma(t) equal sovereignty-dependence cost.</p>
+<p>A social media platform can theoretically be regulated through rules governing content, privacy, or market conduct.</p>
 
-  <p>A minimal production function is:</p>
-  <p>q(i,t) = A(i,t) * c(i,t)^alpha(i), where 0 &lt; alpha(i) &lt; 1</p>
+<p>But frontier AI systems require scarce industrial inputs:</p>
 
-  <p>Electricity demand is:</p>
-  <p>E(t) = sum over i of e(i) * c(i,t)</p>
+<ul>
+<li>advanced semiconductors</li>
+<li>electricity</li>
+<li>cooling systems</li>
+<li>datacenter capacity</li>
+<li>high-bandwidth networking</li>
+<li>cloud infrastructure</li>
+<li>specialized talent</li>
+<li>massive capital expenditure</li>
+</ul>
 
-  <p>A planner that treats compute allocation as governance maximizes social welfare:</p>
+<p>That changes the nature of governance completely.</p>
 
-  <p>maximize over c(i,t) and a(i,t): sum over t of delta^t times [sum over i of beta(i)R(i)(q(i,t)) minus lambda*E(t) minus mu*sum over i of rho(i)(q(i,t),a(i,t)) minus nu*Psi(t) minus xi*Sigma(t)]</p>
+<p>Because now the question is no longer simply:</p>
 
-  <p>subject to:</p>
-  <p>sum over i of c(i,t) &lt;= C(t)</p>
-  <p>E(t) &lt;= E-bar(t)</p>
-  <p>c(P,t) &gt;= c-lower(P,t)</p>
+<p>“What rules should AI follow?”</p>
 
-  <p>where C(t) is total available compute, E-bar(t) is the energy-system ceiling, and c(P,t) is compute reserved for public-interest uses such as research, public services, and SME access.</p>
+<p>The question becomes:</p>
 
-  <p>This setup captures the core governance trade-off. A market-only allocator sets compute mainly by willingness to pay. A governance allocator adjusts for external costs: power, catastrophic risk, concentration, and strategic dependence. The first-order condition for actor i is that the marginal benefit of one more unit of compute must equal the shadow price of the resource plus the marginal energy cost plus the marginal risk cost plus the marginal concentration cost plus the marginal dependence cost.</p>
+<p>“Who gets access to the infrastructure capable of building and deploying AI at scale?”</p>
 
-  <p>That condition gives a social marginal value of compute. In plain English: the next GPU-hour should go to the use case whose extra value still exceeds its shadow price after accounting for energy stress, security risk, concentration, and sovereignty dependence. The literature strongly supports including exactly those extra terms, even if the numerical calibration remains context-specific.</p>
+<p>That is an allocative question.</p>
 
-  <p>A practical policy implementation uses four mechanisms:</p>
-  <ol>
-    <li>Tradable compute permits for very large training runs, with dynamic thresholds that adjust as algorithmic efficiency improves.</li>
-    <li>Risk bonds or insurance premia that rise with estimated catastrophic-risk externality.</li>
-    <li>Public-interest vouchers or reserved allocations for science, public services, and competitive SME access.</li>
-    <li>Concentration penalties or merger remedies when additional compute control materially raises concentration cost.</li>
-  </ol>
+<p>And allocation is governance.</p>
 
-  <p>This is the blunt policy intuition: you do not optimize compute allocation by asking only who can pay most. You optimize it by asking which allocations maximize social value net of system costs. That is why compute allocation is governance and not just procurement.</p>
+<h2>The Different Mental Models</h2>
 
-  <h3>Policy-option comparison</h3>
+<p>One reason the AI governance debate feels fragmented is because different actors are operating from fundamentally different mental models.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Policy option</th>
-      <th>What it governs well</th>
-      <th>Main upside</th>
-      <th>Main weakness</th>
-      <th>Best institutional home</th>
-      <th>Reference</th>
-    </tr>
-    <tr>
-      <td>Training-run notification and cloud reporting thresholds</td>
-      <td>Frontier training visibility</td>
-      <td>Creates legibility quickly</td>
-      <td>Threshold gaming and detection gaps</td>
-      <td>National regulators plus cloud providers</td>
-      <td>https://www.rand.org/pubs/research_reports/RRA3686-1.html ; https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-    <tr>
-      <td>Export controls plus end-use agreements</td>
-      <td>Cross-border capability diffusion</td>
-      <td>Strong leverage where chip supply is concentrated</td>
-      <td>Can be circumvented and can fragment markets</td>
-      <td>Trade and national-security authorities</td>
-      <td>https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule ; https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf</td>
-    </tr>
-    <tr>
-      <td>Sovereign/public compute pools</td>
-      <td>Research, public services, SMEs, regional resilience</td>
-      <td>Broadens access and reduces lock-in</td>
-      <td>Expensive; can turn into subsidy theater</td>
-      <td>National governments, public HPC agencies, regional blocs</td>
-      <td>https://digital-strategy.ec.europa.eu/en/policies/ai-factories ; https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan ; https://www.worldbank.org/en/publication/dptr2025-ai-foundations</td>
-    </tr>
-    <tr>
-      <td>Competition remedies and public-compute support</td>
-      <td>Concentration and foreclosure</td>
-      <td>Preserves market dynamism</td>
-      <td>Slow and legally complex</td>
-      <td>Competition authorities</td>
-      <td>https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/competition-in-artificial-intelligence-infrastructure_69319aee/623d1874-en.pdf</td>
-    </tr>
-    <tr>
-      <td>Energy-system co-planning for datacenters</td>
-      <td>Grid adequacy and local legitimacy</td>
-      <td>Controls the real system bottleneck</td>
-      <td>Requires cross-agency coordination</td>
-      <td>Energy ministries, utilities, siting authorities</td>
-      <td>https://www.energy.gov/oe/clean-energy-resources-meet-data-center-electricity-demand ; https://www.energy.gov/articles/doe-announces-site-selection-ai-data-center-and-energy-infrastructure-development-federal</td>
-    </tr>
-    <tr>
-      <td>Hardware attestation and on-chip metering R&amp;D</td>
-      <td>Treaty verification and stronger assurance</td>
-      <td>Could make compute governance more credible</td>
-      <td>Not mature enough yet for heavy reliance</td>
-      <td>Public R&amp;D programs, chipmakers, standards bodies</td>
-      <td>https://arxiv.org/pdf/2604.04712</td>
-    </tr>
-    <tr>
-      <td>Risk bonds / insurance for frontier runs</td>
-      <td>Private incentives around high-risk development</td>
-      <td>Prices externality directly</td>
-      <td>Hard to model catastrophic risk precisely</td>
-      <td>Financial regulators, insurers, and safety regulators</td>
-      <td>https://www.bis.org/publ/bisbull120.pdf ; https://anthropic.com/responsible-scaling-policy/rsp-v3-0</td>
-    </tr>
-  </table>
+<p>Sometimes they are not even disagreeing on facts.</p>
 
-  <h2>Playbook and references</h2>
+<p>They are disagreeing on what compute actually represents.</p>
 
-  <h3>Practical playbook</h3>
+<h3>1. Compute As A Chokepoint</h3>
 
-  <p>For labs, the immediate task is to stop pretending compute governance is just a government problem. Labs should maintain internal compute registries by cluster, project, jurisdiction, and model lineage; publish threshold-based risk reports; pre-negotiate emergency de-allocation and pause procedures with cloud and power partners; and invest in secure weight handling, auditable scheduling, and verifiable usage logs. If a lab’s public governance proposal does not specify how compute is metered, reserved, and curtailed in practice, it is still just rhetoric.</p>
+<p>One school of thought treats compute primarily as a controllable bottleneck.</p>
 
-  <p>For enterprises, the right move is not to chase frontier scale. It is to build an internal allocation regime. Reserve expensive GPU access for workloads that genuinely need it; route most use cases to cheaper inference or small-model workflows; set business-unit quotas; log prompt and model provenance for regulated functions; and make cost, latency, security, and data residency visible at the point of use. The evidence from enterprise and finance sources points to governed access and modernization, not raw scale, as the real constraint.</p>
+<p>Under this model, compute governance exists mainly to prevent dangerous capability escalation.</p>
 
-  <p>For policymakers, the sequence should be: measure, reserve, discipline, then verify. Measure domestic compute and dependence by territory, provider, and accelerators. Reserve some compute for public-interest use and competitive access. Discipline the stack with competition tools, energy planning, and threshold reporting. Then fund the harder verification work, because treaty-grade hardware assurance is not ready yet. Trying to reverse that order leads straight to performative governance.</p>
+<p>The assumption is that frontier AI systems require sufficiently large training runs that governments can monitor, regulate, or restrict them.</p>
 
-  <table border="1" cellpadding="6" cellspacing="0">
-    <tr>
-      <th>Actor</th>
-      <th>Next 12 months</th>
-      <th>Next 2–5 years</th>
-      <th>Success metric</th>
-    </tr>
-    <tr>
-      <td>Labs</td>
-      <td>Internal compute registry, threshold triggers, auditable usage logs, emergency pause protocols</td>
-      <td>Secure scheduling, external review, hardware-attestation pilots</td>
-      <td>Share of frontier-relevant compute under auditable governance</td>
-    </tr>
-    <tr>
-      <td>Enterprises</td>
-      <td>Costed access tiers, GPU quotas, secure data-routing, model provenance logs</td>
-      <td>Portfolio optimization across small models, cloud, edge, and sovereign-hosted workloads</td>
-      <td>Value created per GPU-hour and lower compliance incident rate</td>
-    </tr>
-    <tr>
-      <td>Policymakers</td>
-      <td>Compute mapping, cloud/provider dependence assessment, datacenter-energy coordination</td>
-      <td>Public compute pools, competition remedies, dynamic thresholds, verification R&amp;D</td>
-      <td>More access diversity, fewer bottlenecks, and better monitored high-end runs</td>
-    </tr>
-  </table>
+<p>This model supports:</p>
 
-  <h3>References</h3>
+<ul>
+<li>compute licensing</li>
+<li>training-run reporting</li>
+<li>export controls</li>
+<li>threshold-based regulation</li>
+<li>cloud monitoring</li>
+<li>hardware verification</li>
+</ul>
 
-  <p>The references below prioritize primary and official documents, plus a small number of high-signal industry analyses directly relevant to compute allocation.</p>
+<p>The strength of this approach is legibility.</p>
 
-  <ul>
-    <li>Belfield, Haydn. Domestic frontier AI regulation, an IAEA for AI, an NPT for AI, and a US-led Allied Public-Private Partnership for AI: Four institutions for governing and developing frontier AI (2025), arXiv. https://arxiv.org/abs/2507.06379</li>
-    <li>Al Ramiah, Ananthi, et al. Toward a Global Regime for Compute Governance: Building the Pause Button (2025), arXiv. https://arxiv.org/abs/2506.20530</li>
-    <li>Hawkins, Zoe Jay, Vili Lehdonvirta, and Boxi Wu. AI Compute Sovereignty: Infrastructure Control Across Territories, Cloud Providers, and Accelerators (2025), SSRN. https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5312977</li>
-    <li>Moon, Alvin, Padmaja Vedula, Jesse Geneson, and Simon Bar-on. Strategies and Detection Gaps in a Game-Theoretic Model of Compute Governance (2025), RAND. https://www.rand.org/pubs/research_reports/RRA3686-1.html</li>
-    <li>Lehdonvirta, Vili, et al. Measuring domestic public cloud compute availability for artificial intelligence (2025), OECD Artificial Intelligence Papers No. 49. https://www.oecd.org/en/publications/measuring-domestic-public-cloud-compute-availability-for-artificial-intelligence_8602a322-en.html</li>
-    <li>OECD. Competition in artificial intelligence infrastructure (2025), OECD Competition Policy Papers. https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/11/competition-in-artificial-intelligence-infrastructure_69319aee/623d1874-en.pdf</li>
-    <li>Barnett, Peter. Compute Requirements for Algorithmic Innovation in Frontier AI Models (2025), arXiv / OpenReview. https://arxiv.org/pdf/2507.10618 ; https://openreview.net/forum?id=ozZP09H4Ep</li>
-    <li>World Bank. Digital Progress and Trends Report 2025: Strengthening AI Foundations (2025). https://www.worldbank.org/en/publication/dptr2025-ai-foundations</li>
-    <li>International Energy Agency. Energy and AI (2025). https://www.iea.org/reports/energy-and-ai</li>
-    <li>International Energy Agency. Executive summary – Energy and AI and 2026 update materials on data-center electricity demand. https://www.iea.org/reports/energy-and-ai/executive-summary ; https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions</li>
-    <li>Christine Lagarde. The transformative power of AI: Europe’s moment to act (2025), European Central Bank speech. https://www.ecb.europa.eu/press/key/date/2025/html/ecb.sp251124_1~c239fb4a7f.en.html</li>
-    <li>United Nations materials on the Global Dialogue on AI Governance, Independent International Scientific Panel on AI, and AI capacity building including affordable computing power (2025–2026). https://india.un.org/en/310321-india-ai-impact-summit-un-chief-says-ai-%E2%80%9Cmust-belong-everyone%E2%80%9D ; https://india.un.org/en/300656-secretary-general-welcomes-unga-decision-establish-new-mechanisms-promoting-international ; https://dprk.un.org/en/287452-secretary-general-address-2025-priorities</li>
-    <li>European Commission. AI Continent Action Plan (2025), AI Factories (2025), and Apply AI Strategy (2026). https://digital-strategy.ec.europa.eu/en/factpages/ai-continent-action-plan ; https://digital-strategy.ec.europa.eu/en/policies/ai-factories ; https://digital-strategy.ec.europa.eu/en/policies/apply-ai</li>
-    <li>OECD.AI. How the G7’s new AI reporting framework could shape the future of AI governance (2025). https://oecd.ai/en/wonk/how-the-g7s-new-ai-reporting-framework-could-shape-the-future-of-ai-governance</li>
-    <li>ITU. 2025 AI Governance Dialogue Co-Chairs Statement (2025). https://www.itu.int/en/mediacentre/Documents/2025/statement-co-chairs-on-AI-governance-dialogue-2025.pdf</li>
-    <li>OpenAI. Introducing OpenAI for Countries (2025); Ideas to Power Democratic AI (2025); The EU Code of Practice and future of AI in Europe (2025); AI in Australia: OpenAI’s Economic Blueprint (2025). https://openai.com/global-affairs/openai-for-countries/ ; https://cdn.openai.com/global-affairs/9c98a71f-7d2f-4566-9da7-4a7628c60bea/oai-ideas-to-power-democratic-ai-june-2025.pdf ; https://openai.com/global-affairs/eu-code-of-practice/ ; https://cdn.openai.com/global-affairs/61b341bc-56eb-46dc-b356-a621e02cb82d/openai-australia-economic-blueprint-july-2025.pdf</li>
-    <li>Anthropic. AI Export Controls Framework Response (2025); Response to OSTP RFI (2025); Responsible Scaling Policy v3.0 (2026). https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule ; https://assets.anthropic.com/m/4e20a4ab6512e217/original/Anthropic-Response-to-OSTP-RFI-March-2025-Final-Submission-v3.pdf ; https://anthropic.com/responsible-scaling-policy/rsp-v3-0</li>
-    <li>Google / Google Cloud / Google DeepMind materials on Sovereign AI, AI infrastructure, responsible AGI, and the environmental impact of AI inference (2025–2026). https://blog.google/company-news/outreach-and-initiatives/public-policy/ai-turning-ambition-into-action/ ; https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference/ ; https://cloud.google.com/resources/content/state-of-ai-infrastructure ; https://deepmind.google/blog/taking-a-responsible-path-to-agi/</li>
-    <li>Meta materials on open hardware, next-generation AI datacenters, and the Advanced AI Scaling Framework (2025–2026). https://about.fb.com/news/2025/10/open-hardware-future-data-center-infrastructure/ ; https://about.fb.com/news/2025/10/metas-new-ai-optimized-data-center-el-paso/ ; https://ai.meta.com/blog/scaling-how-we-build-test-advanced-ai/ ; https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2</li>
-    <li>BHP materials on digital twins in mining and copper demand from AI datacenters (2025). https://www.bhp.com/news/bhp-insights/2025/02/the-role-of-digital-twins-and-ai-in-enhancing-decision-making-in-the-mining-industry ; https://www.bhp.com/es/news/bhp-insights/2025/01/why-ai-tools-and-data-centres-are-driving-copper-demand</li>
-    <li>International Civil Aviation Organization. Artificial intelligence contribution to aviation (2025), plus Airbus and Boeing operational materials on digital twins, predictive maintenance, and AI-enabled simulation. https://www.icao.int/sites/default/files/Meetings/a42/Documents/WP/wp_489_en.pdf ; https://www.airbus.com/en/newsroom/stories/2025-04-digital-twins-accelerating-aerospace-innovation-from-design-to-operations ; https://www.boeing.com/innovation/innovation-quarterly/2025/12/shaping-ai-for-the-sky</li>
-    <li>Unilever and Nestlé materials on AI-enabled supply chains, digital twins, and product innovation (2025). https://www.unilever.com/news/news-search/2025/how-ai-is-transforming-unilever-ice-creams-end-to-end-supply-chain/ ; https://www.unilever.com/news/press-and-media/press-releases/2025/unilever-reinvents-product-shoots-with-digital-twins-and-ai/ ; https://www.nestle.com/media/news/brands-ai-digital-twins-content-service ; https://www.nestle.com/about/research-development/news/ibm-ai-powered-sustainable-packaging</li>
-    <li>BIS. Financing the AI boom: from cash flows to debt (2026). https://www.bis.org/publ/bisbull120.pdf</li>
-    <li>McKinsey. The cost of compute: A $7 trillion race to scale data centers (2025). https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-cost-of-compute-a-7-trillion-dollar-race-to-scale-data-centers</li>
-  </ul>
+<p>Compute is more measurable than ideas.</p>
+
+<p>More measurable than algorithms.</p>
+
+<p>More measurable than human knowledge.</p>
+
+<p>That makes it attractive from a governance perspective.</p>
+
+<p>But critics argue this model may become obsolete quickly if algorithmic efficiency improves faster than expected.</p>
+
+<p>If smaller systems become dramatically more capable, compute thresholds may stop functioning as reliable proxies for capability.</p>
+
+<p>In that world, compute governance risks becoming performative rather than effective.</p>
+
+<h3>2. Compute As Sovereignty</h3>
+
+<p>Another model treats compute primarily as strategic national infrastructure.</p>
+
+<p>Under this framework, compute resembles energy security, telecommunications infrastructure, or semiconductor manufacturing capacity.</p>
+
+<p>The core concern is not only safety.</p>
+
+<p>It is dependency.</p>
+
+<p>This model asks:</p>
+
+<ul>
+<li>Who owns the cloud infrastructure?</li>
+<li>Where are the datacenters located?</li>
+<li>Who manufactures the chips?</li>
+<li>Who controls the networking layer?</li>
+<li>Who controls the APIs?</li>
+<li>Who controls access during geopolitical tension?</li>
+</ul>
+
+<p>This framework increasingly shapes policy discussions in the United States, China, Europe, and parts of the Indo-Pacific.</p>
+
+<p>The strength of the sovereignty model is realism.</p>
+
+<p>It recognizes that AI systems do not float abstractly in cyberspace.</p>
+
+<p>They depend on physical systems controlled by specific jurisdictions and corporations.</p>
+
+<p>But critics argue the sovereignty model risks fragmentation.</p>
+
+<p>If every nation pursues full-stack AI independence, the world could drift toward competing compute blocs, reduced interoperability, higher costs, and slower innovation.</p>
+
+<p>The pursuit of sovereignty may increase resilience while simultaneously reducing openness.</p>
+
+<h3>3. Compute As Industrial Policy</h3>
+
+<p>A third model views compute primarily through the lens of economic development.</p>
+
+<p>Under this framework, compute allocation becomes an industrial policy question.</p>
+
+<p>The objective is not simply preventing harm.</p>
+
+<p>The objective is ensuring national competitiveness.</p>
+
+<p>Countries following this logic focus on:</p>
+
+<ul>
+<li>public compute infrastructure</li>
+<li>AI factories</li>
+<li>national datacenter build-outs</li>
+<li>subsidized semiconductor investment</li>
+<li>energy expansion</li>
+<li>public-private partnerships</li>
+<li>startup compute access</li>
+</ul>
+
+<p>The assumption is that countries unable to secure meaningful compute capacity may eventually become structurally dependent economies within the AI era.</p>
+
+<p>The strength of this model is strategic clarity.</p>
+
+<p>It recognizes that compute access may become foundational to productivity, research, military capability, education, healthcare, and industrial competitiveness.</p>
+
+<p>But critics warn that industrial-policy approaches can easily drift into subsidy races, political favoritism, and infrastructure overbuilding.</p>
+
+<p>Not every nation can become a frontier AI superpower.</p>
+
+<p>And massive capital deployment does not guarantee meaningful innovation outcomes.</p>
+
+<h3>4. Compute As A Public Utility</h3>
+
+<p>Another emerging model treats compute similarly to electricity, water systems, or telecommunications.</p>
+
+<p>Under this framework, advanced AI infrastructure becomes too systemically important to leave entirely to unrestricted market allocation.</p>
+
+<p>This model raises difficult questions.</p>
+
+<p>Should public-interest researchers receive guaranteed compute access?</p>
+
+<p>Should schools, hospitals, and universities have subsidized AI infrastructure access?</p>
+
+<p>Should governments maintain sovereign compute reserves?</p>
+
+<p>Should public-interest workloads receive allocation priority during shortages?</p>
+
+<p>The strength of this model is social stability.</p>
+
+<p>It recognizes that unrestricted market allocation may eventually exclude smaller firms, public institutions, and developing economies.</p>
+
+<p>But critics argue utility-style governance risks slowing innovation and introducing heavy bureaucratic inefficiencies into a rapidly evolving technological ecosystem.</p>
+
+<p>The challenge becomes finding the balance between strategic access and economic dynamism.</p>
+
+<h2>The Energy Reality</h2>
+
+<p>One of the biggest changes in AI governance is that energy policy and AI policy are rapidly converging.</p>
+
+<p>For years, the digital economy largely insulated itself from physical constraints.</p>
+
+<p>AI reversed that trend.</p>
+
+<p>Suddenly electricity matters again.</p>
+
+<p>Grid capacity matters again.</p>
+
+<p>Transmission matters again.</p>
+
+<p>Power generation matters again.</p>
+
+<p>Because compute is fundamentally an energy conversion process.</p>
+
+<p>This creates a difficult tension.</p>
+
+<p>Governments want AI leadership.</p>
+
+<p>Companies want larger training clusters.</p>
+
+<p>But communities increasingly push back against:</p>
+
+<ul>
+<li>water usage</li>
+<li>power demand</li>
+<li>land consumption</li>
+<li>environmental strain</li>
+<li>infrastructure pressure</li>
+</ul>
+
+<p>This is why compute governance increasingly overlaps with energy governance.</p>
+
+<p>An AI strategy without an energy strategy may ultimately be meaningless.</p>
+
+<p>And an energy strategy without accounting for AI demand may become increasingly unrealistic.</p>
+
+<h2>The Verification Problem</h2>
+
+<p>One of the hardest unresolved issues is verification.</p>
+
+<p>Governance systems only work if they can actually observe what they are attempting to govern.</p>
+
+<p>And today, hardware-level verification remains immature.</p>
+
+<p>This creates a paradox.</p>
+
+<p>Governments increasingly want:</p>
+
+<ul>
+<li>training-run visibility</li>
+<li>compute thresholds</li>
+<li>export enforcement</li>
+<li>hardware monitoring</li>
+<li>assurance mechanisms</li>
+</ul>
+
+<p>But the underlying technical infrastructure for treaty-grade verification may not yet exist at sufficient maturity.</p>
+
+<p>This creates disagreement between policy ambition and engineering reality.</p>
+
+<p>Some experts argue governments should aggressively regulate now and improve verification later.</p>
+
+<p>Others argue premature governance systems risk creating symbolic theater rather than meaningful oversight.</p>
+
+<p>That tension is unlikely to disappear anytime soon.</p>
+
+<h2>The Enterprise Layer</h2>
+
+<p>Most public discussion focuses on frontier labs.</p>
+
+<p>But compute governance increasingly matters inside ordinary enterprises as well.</p>
+
+<p>Large organizations are already rationing GPU access internally.</p>
+
+<p>Prioritizing workloads.</p>
+
+<p>Managing inference costs.</p>
+
+<p>Controlling data residency.</p>
+
+<p>Restricting sensitive deployments.</p>
+
+<p>Creating internal allocation systems.</p>
+
+<p>Which means compute governance is not only geopolitical.</p>
+
+<p>It is organizational.</p>
+
+<p>The same allocative questions appear at every scale:</p>
+
+<ul>
+<li>Who gets priority access?</li>
+<li>Which workloads matter most?</li>
+<li>How are scarce resources distributed?</li>
+<li>What level of oversight exists?</li>
+<li>What risks justify restrictions?</li>
+</ul>
+
+<p>In many ways, enterprises are becoming miniature governance systems for compute allocation themselves.</p>
+
+<h2>The Risk Of Cartelization</h2>
+
+<p>One of the biggest long-term concerns is that compute concentration could eventually harden into permanent structural dominance.</p>
+
+<p>Not merely because of better models.</p>
+
+<p>But because infrastructure itself becomes inaccessible.</p>
+
+<p>If a small number of firms control:</p>
+
+<ul>
+<li>the chips</li>
+<li>the cloud</li>
+<li>the datacenters</li>
+<li>the APIs</li>
+<li>the energy relationships</li>
+<li>the financing structures</li>
+</ul>
+
+<p>then competition may become increasingly difficult regardless of technical talent.</p>
+
+<p>This is where competition policy enters the conversation.</p>
+
+<p>Some experts argue aggressive antitrust intervention will eventually become necessary.</p>
+
+<p>Others argue scale concentration is unavoidable because frontier AI systems naturally require enormous capital expenditure.</p>
+
+<p>Both positions contain truth.</p>
+
+<p>AI infrastructure genuinely exhibits scale economics.</p>
+
+<p>But scale economics do not automatically justify unlimited concentration.</p>
+
+<p>The difficult question is where healthy concentration ends and unhealthy dependency begins.</p>
+
+<h2>The Geopolitical Layer</h2>
+
+<p>Compute allocation is increasingly shaping geopolitics directly.</p>
+
+<p>Export controls.</p>
+
+<p>Chip restrictions.</p>
+
+<p>Cloud access.</p>
+
+<p>Datacenter placement.</p>
+
+<p>Supply-chain alliances.</p>
+
+<p>Strategic mineral dependencies.</p>
+
+<p>These are no longer secondary policy issues.</p>
+
+<p>They are becoming central to national strategy.</p>
+
+<p>The AI race increasingly resembles infrastructure competition rather than software competition.</p>
+
+<p>And infrastructure competition historically reshapes global power structures.</p>
+
+<p>Oil did.</p>
+
+<p>Railroads did.</p>
+
+<p>Electricity did.</p>
+
+<p>Semiconductors did.</p>
+
+<p>Now compute infrastructure may do the same.</p>
+
+<h2>The Most Important Question</h2>
+
+<p>The biggest governance question may ultimately be surprisingly simple:</p>
+
+<p>Who gets access to intelligence infrastructure?</p>
+
+<p>Because once AI becomes foundational to science, logistics, medicine, education, engineering, finance, and state capacity, compute allocation starts influencing opportunity itself.</p>
+
+<p>Not equally.</p>
+
+<p>Not neutrally.</p>
+
+<p>But structurally.</p>
+
+<p>That does not necessarily mean governments should fully centralize AI infrastructure.</p>
+
+<p>It does not necessarily mean markets should fully control it either.</p>
+
+<p>The future likely involves layered systems.</p>
+
+<p>Public allocation.</p>
+
+<p>Private allocation.</p>
+
+<p>Sovereign infrastructure.</p>
+
+<p>Commercial infrastructure.</p>
+
+<p>Shared standards.</p>
+
+<p>Competitive ecosystems.</p>
+
+<p>Regional specialization.</p>
+
+<p>The real challenge is not whether compute should be governed.</p>
+
+<p>It already is.</p>
+
+<p>Through capital markets.</p>
+
+<p>Through cloud pricing.</p>
+
+<p>Through export controls.</p>
+
+<p>Through energy systems.</p>
+
+<p>Through procurement rules.</p>
+
+<p>Through infrastructure ownership.</p>
+
+<p>The real challenge is whether societies can design governance systems around compute before infrastructure concentration becomes irreversible.</p>
+
+<p>Because once intelligence infrastructure hardens into permanent bottlenecks, reversing those dynamics may become extraordinarily difficult.</p>
+
+<p>And that is why compute allocation is not merely a technical issue.</p>
+
+<p>It is becoming one of the defining governance questions of the AI century.</p>
+
 </body>
 </html>
