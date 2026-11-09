@@ -1,0 +1,656 @@
+
+<h1>The Economics of Computational Breakthroughs</h1>
+
+<p>Why solving the impossible does not necessarily make it affordable.</p>
+
+<h2>A Mathematical Breakthrough That May Change Almost Nothing</h2>
+
+<p>In October 2026, OpenAI published a paper with an extraordinary title: The Exponential Time Hypothesis is False.</p>
+
+<p>The paper proposed an algorithm that, if its proof survives independent scrutiny, would overturn one of the most important assumptions in theoretical computer science.</p>
+
+<p>For decades, researchers have studied the difficulty of solving certain computational problems as their size increases.</p>
+
+<p>Some problems can be solved efficiently. Others appear to require an enormous number of computational steps.</p>
+
+<p>The Exponential Time Hypothesis, or ETH, suggests that certain problems, particularly Boolean satisfiability problems such as 3-SAT, cannot be solved in subexponential time in the worst case.</p>
+
+<p>OpenAI challenged that assumption.</p>
+
+<p>Its proposed algorithm has a running-time bound of:</p>
+
+<p>poly(n,m) × 2^O(n log log n / √log n)</p>
+
+<p>For sufficiently large inputs, this grows more slowly than any fixed exponential function of the form 2^(cn), where c is a positive constant.</p>
+
+<p>Mathematically, that is an extraordinary claim.</p>
+
+<p>It does not prove that P equals NP.</p>
+
+<p>It does not make every computationally difficult problem easy.</p>
+
+<p>But if correct, it changes an important boundary in our understanding of computation.</p>
+
+<p>And yet, something even more interesting happens when we examine the economics.</p>
+
+<p><strong>The algorithm may be mathematically revolutionary while remaining economically useless.</strong></p>
+
+<p>An independent analysis by Fabio Dias and Yvens Lima examined the practical implications of the claimed result.</p>
+
+<p>Their analysis showed that, depending on the constants hidden inside the mathematical notation, the theoretical upper bound may not outperform brute-force search until the number of variables reaches astronomical levels.</p>
+
+<p>With an illustrative hidden constant of 2, the crossover occurs around 10^32 variables.</p>
+
+<p>With a constant of 3, it moves to approximately 10^126.</p>
+
+<p>With a constant of 10, it reaches roughly 10^3517.</p>
+
+<p>These are not measurements of the algorithm's actual runtime. They are conditional estimates of when its theoretical bound becomes smaller than a brute-force benchmark.</p>
+
+<p>Nevertheless, they reveal a fundamental problem.</p>
+
+<p>A breakthrough can transform the mathematics of computation without transforming the economics of computation.</p>
+
+<p>A problem can become theoretically easier while remaining practically impossible.</p>
+
+<p>The boundary of mathematical possibility can move without moving the boundary of commercial feasibility.</p>
+
+<p>This distinction deserves far more attention.</p>
+
+<p>Because the future of artificial intelligence, scientific discovery, industrial technology, and economic competition will depend not only on which problems we can solve.</p>
+
+<p>It will depend on which problems we can afford to solve.</p>
+
+<h2>The Difference Between Possible and Affordable</h2>
+
+<p>Classical computational complexity asks how the resources required to solve a problem grow as the problem becomes larger.</p>
+
+<p>It is concerned with the mathematical structure of computation.</p>
+
+<p>An algorithm may require polynomial time.</p>
+
+<p>Another may require exponential time.</p>
+
+<p>A third may achieve a better asymptotic bound without becoming practical at any relevant input size.</p>
+
+<p>These distinctions are essential.</p>
+
+<p>They tell us what computation can theoretically achieve.</p>
+
+<p>But economies do not operate in asymptotic space.</p>
+
+<p>Businesses do not purchase mathematical elegance.</p>
+
+<p>Governments do not build infrastructure around theoretical upper bounds.</p>
+
+<p>Investors do not allocate capital based solely on whether an exponent has improved.</p>
+
+<p>They operate within physical and financial constraints.</p>
+
+<p>They have budgets.</p>
+
+<p>They have deadlines.</p>
+
+<p>They have limited electricity.</p>
+
+<p>They have limited hardware.</p>
+
+<p>They have limited engineering talent.</p>
+
+<p>They face competitors, regulation, supply-chain dependencies, and uncertainty.</p>
+
+<p>For them, the important question is not simply whether a problem can be solved.</p>
+
+<p>It is whether the problem can be solved at a cost that makes the result valuable.</p>
+
+<p>Consider two algorithms.</p>
+
+<p>The first has a better theoretical growth rate but requires expensive infrastructure, specialised expertise, and enormous fixed costs.</p>
+
+<p>The second has a worse theoretical growth rate but runs efficiently on ordinary hardware for the input sizes that actually matter.</p>
+
+<p>Mathematics may favour the first algorithm in the limit.</p>
+
+<p>Economics may favour the second for decades.</p>
+
+<p>Or perhaps forever within the relevant commercial market.</p>
+
+<p>This creates a distinction between two frontiers.</p>
+
+<p>The frontier of mathematical solvability.</p>
+
+<p>And the frontier of economic solvability.</p>
+
+<p>They are related.</p>
+
+<p>But they are not the same.</p>
+
+<h2>A Model of Effective Computational Complexity</h2>
+
+<p>This distinction is the foundation of what I call the Economic Model of Computational Complexity.</p>
+
+<p>The central proposal is simple.</p>
+
+<p>The practical difficulty of a computational problem is determined by more than its mathematical structure.</p>
+
+<p>It is also determined by the economic conditions under which the problem is solved and the strategic behaviour of the actors competing to solve it.</p>
+
+<p>Conceptually:</p>
+
+<p>Ce = f(M, E, S)</p>
+
+<p>Where:</p>
+
+<p>Ce represents effective computational complexity.</p>
+
+<p>M represents mathematical complexity.</p>
+
+<p>E represents economic complexity.</p>
+
+<p>S represents strategic complexity.</p>
+
+<p>Mathematical complexity describes the formal computational requirements of the problem.</p>
+
+<p>Economic complexity describes the resources and costs involved in producing a useful solution.</p>
+
+<p>Strategic complexity describes how competition, cooperation, incentives, and control over critical resources change those costs.</p>
+
+<p>This is a conceptual framework, not a replacement for classical complexity theory.</p>
+
+<p>It does not claim that electricity prices alter whether a problem belongs to P or NP.</p>
+
+<p>It argues that formal complexity alone cannot determine the economic feasibility of computation.</p>
+
+<p>And the OpenAI case illustrates why.</p>
+
+<p>If the proposed algorithm is correct, the mathematical frontier has moved.</p>
+
+<p>But the economic frontier may remain almost exactly where it was.</p>
+
+<p>The breakthrough changes what is possible in principle.</p>
+
+<p>It may not change what is affordable in practice.</p>
+
+<p>That difference is where economic analysis becomes necessary.</p>
+
+<h2>The Hidden Economics Inside an Algorithm</h2>
+
+<p>The conventional presentation of an algorithm often focuses on its asymptotic running time.</p>
+
+<p>But asymptotic notation hides important information.</p>
+
+<p>It can hide constants.</p>
+
+<p>It can hide implementation costs.</p>
+
+<p>It can hide memory requirements.</p>
+
+<p>It can hide communication overhead.</p>
+
+<p>It can hide the cost of specialised hardware.</p>
+
+<p>It can hide the cost of developing, testing, and maintaining the system.</p>
+
+<p>A mathematically superior algorithm can therefore be economically inferior.</p>
+
+<p>To make this distinction measurable, effective computational cost can be represented as:</p>
+
+<p>C_eff,i(n,t) = min [K_i(a,t) + p_i(t)R_a(n,t) + V_iT_a(n,t)]</p>
+
+<p>The minimum is taken over the algorithms available to organisation i at time t that satisfy the required quality and delivery constraints.</p>
+
+<p>Where:</p>
+
+<p>K represents the cost of implementing and integrating an algorithm.</p>
+
+<p>p represents the effective price of computational resources.</p>
+
+<p>R represents the quantity of resources consumed.</p>
+
+<p>T represents the time required to produce the result.</p>
+
+<p>V represents the economic cost of time.</p>
+
+<p>This is a proposed economic cost model, not an established theorem of computational complexity.</p>
+
+<p>Its purpose is to make a distinction visible.</p>
+
+<p>Two organisations can face the same mathematical problem while experiencing entirely different effective costs.</p>
+
+<p>One may have access to specialised accelerators.</p>
+
+<p>Another may depend on expensive cloud infrastructure.</p>
+
+<p>One may own proprietary datasets.</p>
+
+<p>Another may spend years acquiring and cleaning data.</p>
+
+<p>One may possess the technical knowledge to implement a new algorithm.</p>
+
+<p>Another may know that the algorithm exists but lack the capability to use it.</p>
+
+<p>One may secure inexpensive energy.</p>
+
+<p>Another may face grid constraints that prevent expansion.</p>
+
+<p>The mathematical problem may be identical.</p>
+
+<p>The effective cost is not.</p>
+
+<p>And in competitive markets, that difference can be more important than the algorithm itself.</p>
+
+<h2>Artificial Intelligence Is Changing the Cost of Discovery</h2>
+
+<p>There is another dimension to the OpenAI announcement.</p>
+
+<p>The breakthrough was reportedly generated by an AI system.</p>
+
+<p>That introduces a second economic question.</p>
+
+<p>What happens when the cost of discovering new algorithms begins to decline?</p>
+
+<p>Historically, advances in theoretical computer science depended on highly specialised human researchers.</p>
+
+<p>Their work required years of education.</p>
+
+<p>Years of investigation.</p>
+
+<p>Institutional support.</p>
+
+<p>Research funding.</p>
+
+<p>And often long periods of uncertainty.</p>
+
+<p>Now imagine an environment in which AI systems can help researchers generate new mathematical arguments, explore possible proofs, formalise results, and identify relationships that would otherwise require enormous human effort.</p>
+
+<p>The marginal cost of generating candidate discoveries could fall.</p>
+
+<p>The number of candidate discoveries could increase.</p>
+
+<p>The speed of mathematical exploration could accelerate.</p>
+
+<p>But the cost of verifying those discoveries may not fall at the same rate.</p>
+
+<p>A system capable of generating hundreds of mathematical claims creates a new economic burden if each claim requires substantial expert review.</p>
+
+<p>The cost of producing a proposed solution may decline while the cost of establishing its correctness remains high.</p>
+
+<p>This creates another important distinction.</p>
+
+<p><strong>Discovery is not verification.</strong></p>
+
+<p>And verification is not necessarily cheap simply because discovery has become cheap.</p>
+
+<p>A formal proof assistant can help.</p>
+
+<p>But formal verification still depends on what has actually been encoded and proved.</p>
+
+<p>In OpenAI's case, the published Lean formalisation establishes a weaker asymptotic bound than the headline result in the accompanying paper.</p>
+
+<p>Both bounds would be sufficient to challenge ETH if correctly established.</p>
+
+<p>But the distinction matters.</p>
+
+<p>The economic value of AI-generated discoveries depends not only on how quickly they are produced.</p>
+
+<p>It depends on how reliably they can be verified, reproduced, understood, and converted into practical applications.</p>
+
+<p>The bottleneck may move from discovery to verification.</p>
+
+<p>From verification to implementation.</p>
+
+<p>From implementation to infrastructure.</p>
+
+<p>And from infrastructure to commercial adoption.</p>
+
+<p>Every time one constraint disappears, another may become decisive.</p>
+
+<h2>The Strategic Game Behind Computation</h2>
+
+<p>Computational problems are not solved in isolation.</p>
+
+<p>They are solved by organisations competing for resources, capabilities, customers, and economic advantage.</p>
+
+<p>Consider two AI laboratories.</p>
+
+<p>Both have access to similar mathematical knowledge.</p>
+
+<p>Both understand the same algorithms.</p>
+
+<p>Both can read the same published research.</p>
+
+<p>Yet one may have substantially lower costs than the other.</p>
+
+<p>Why?</p>
+
+<p>It may have better infrastructure.</p>
+
+<p>It may have cheaper electricity.</p>
+
+<p>It may have more efficient software.</p>
+
+<p>It may have stronger relationships with semiconductor manufacturers.</p>
+
+<p>It may have greater access to capital.</p>
+
+<p>It may possess proprietary data.</p>
+
+<p>It may have developed better internal tools for evaluating new discoveries.</p>
+
+<p>Its advantage does not necessarily come from knowing mathematics that competitors do not know.</p>
+
+<p>Its advantage may come from turning the same mathematics into useful results at lower cost.</p>
+
+<p>This is where game theory becomes important.</p>
+
+<p>Companies do not simply compete to solve computational problems.</p>
+
+<p>They compete to shape the economic conditions under which those problems are solved.</p>
+
+<p>One company invests in specialised chips.</p>
+
+<p>Another develops more efficient algorithms.</p>
+
+<p>One secures long-term energy contracts.</p>
+
+<p>Another improves model compression.</p>
+
+<p>One acquires proprietary data.</p>
+
+<p>Another builds an open-source ecosystem.</p>
+
+<p>One controls distribution.</p>
+
+<p>Another reduces the price of inference.</p>
+
+<p>Every strategic decision changes the effective cost structure of computation.</p>
+
+<p>Sometimes for one company.</p>
+
+<p>Sometimes for an entire industry.</p>
+
+<p>And sometimes for competitors who never participated in the original decision.</p>
+
+<p>This makes computational economics dynamic.</p>
+
+<p>The cost of solving a problem is not merely determined by technology.</p>
+
+<p>It is partly determined by the strategic behaviour of the organisations that control technology.</p>
+
+<h2>Relative Computational Advantage</h2>
+
+<p>This leads to what I consider the most important implication of the framework.</p>
+
+<p>Companies do not necessarily need to solve the hardest problems in the world.</p>
+
+<p>They need to solve commercially important problems more efficiently than their competitors.</p>
+
+<p>I call this Relative Computational Advantage.</p>
+
+<p>An organisation possesses relative computational advantage when its effective cost of producing a comparable computational result is lower than that of its competitors.</p>
+
+<p>One possible representation is:</p>
+
+<p>RCA_i = C_benchmark / C_eff,i</p>
+
+<p>An RCA greater than one indicates a cost advantage relative to the chosen benchmark.</p>
+
+<p>This formulation assumes comparable outputs, reliability, and service quality.</p>
+
+<p>The advantage can emerge from many sources.</p>
+
+<p>Better algorithms.</p>
+
+<p>Cheaper energy.</p>
+
+<p>More efficient hardware.</p>
+
+<p>Superior data.</p>
+
+<p>Greater engineering productivity.</p>
+
+<p>Better organisational coordination.</p>
+
+<p>Lower capital costs.</p>
+
+<p>Stronger infrastructure.</p>
+
+<p>Faster deployment.</p>
+
+<p>Or privileged access to an essential input.</p>
+
+<p>Consider NVIDIA.</p>
+
+<p>Its competitive position cannot be explained by semiconductor performance alone.</p>
+
+<p>Its software ecosystem reduces development effort.</p>
+
+<p>Its networking technologies address communication bottlenecks.</p>
+
+<p>Its integrated systems reduce deployment friction.</p>
+
+<p>Its developer ecosystem makes specialised computing more accessible.</p>
+
+<p>These capabilities can lower the effective cost of computation for customers.</p>
+
+<p>At the same time, the ecosystem can increase switching costs and make competition more difficult for rival suppliers.</p>
+
+<p>NVIDIA does not need to change the mathematical complexity of every workload.</p>
+
+<p>It can create economic value by changing the cost of running those workloads.</p>
+
+<p>And it can create strategic advantage by influencing the infrastructure on which other organisations depend.</p>
+
+<p>This is a different form of computational power.</p>
+
+<p>Not the power to solve a problem that nobody else can solve.</p>
+
+<p>But the power to make solving it cheaper, faster, and easier within an ecosystem that others struggle to replicate.</p>
+
+<h2>A Mathematical Breakthrough Is Not an Economic Breakthrough</h2>
+
+<p>The OpenAI announcement exposes a broader misunderstanding about technological progress.</p>
+
+<p>We tend to treat breakthroughs as singular events.</p>
+
+<p>A problem is solved.</p>
+
+<p>A theory is disproved.</p>
+
+<p>An algorithm is discovered.</p>
+
+<p>A model achieves a new benchmark.</p>
+
+<p>And the world is expected to change.</p>
+
+<p>But economic transformation rarely follows that sequence automatically.</p>
+
+<p>A scientific discovery can exist for decades before becoming commercially useful.</p>
+
+<p>A new algorithm may require hardware that does not yet exist.</p>
+
+<p>A new computational capability may depend on energy infrastructure that has not yet been built.</p>
+
+<p>An AI system may outperform humans in a controlled benchmark while remaining too expensive, unreliable, or difficult to integrate into real operations.</p>
+
+<p>There are several separate transitions.</p>
+
+<p>From mathematical possibility to algorithmic implementation.</p>
+
+<p>From implementation to affordable computation.</p>
+
+<p>From affordable computation to reliable deployment.</p>
+
+<p>From deployment to economically valuable applications.</p>
+
+<p>From valuable applications to durable competitive advantage.</p>
+
+<p>Each transition introduces new constraints.</p>
+
+<p>And each constraint has its own economics.</p>
+
+<p>This is why an improvement in theoretical computational complexity cannot automatically be translated into economic productivity.</p>
+
+<p>A better algorithm may change the mathematical frontier.</p>
+
+<p>Cheaper compute may change the operational frontier.</p>
+
+<p>Better organisations may change the deployment frontier.</p>
+
+<p>And strategic control over resources may determine who captures the value.</p>
+
+<p>These frontiers move at different speeds.</p>
+
+<p>Sometimes together.</p>
+
+<p>Often independently.</p>
+
+<h2>The Next Frontier of Computational Economics</h2>
+
+<p>The next forty years may produce extraordinary advances in computational capability.</p>
+
+<p>AI systems may discover better algorithms.</p>
+
+<p>Specialised hardware may reduce the cost of computation.</p>
+
+<p>New energy infrastructure may expand available capacity.</p>
+
+<p>Automation may reduce engineering and organisational costs.</p>
+
+<p>Open-source systems may distribute capabilities that once belonged exclusively to large institutions.</p>
+
+<p>Scientific discovery may become increasingly computational.</p>
+
+<p>But none of these developments guarantees that economic advantage will become equally distributed.</p>
+
+<p>In fact, declining computational costs may increase the importance of other scarce resources.</p>
+
+<p>If algorithms become widely available, proprietary data may become more valuable.</p>
+
+<p>If hardware becomes cheaper, access to electricity may become more important.</p>
+
+<p>If AI models become commoditised, distribution and integration may become the principal sources of advantage.</p>
+
+<p>If discovery becomes cheap, verification and institutional trust may become more valuable.</p>
+
+<p>If software becomes easier to build, the ability to deploy it across complex organisations may become the real constraint.</p>
+
+<p>The scarcity does not necessarily disappear.</p>
+
+<p><strong>It moves.</strong></p>
+
+<p>And the organisations that identify the next scarcity before their competitors may capture disproportionate economic value.</p>
+
+<p>This is why understanding computational progress requires more than following model benchmarks or algorithmic discoveries.</p>
+
+<p>It requires understanding the changing relationship between mathematics, infrastructure, capital, institutions, and strategic behaviour.</p>
+
+<h2>A Different Question for the AI Economy</h2>
+
+<p>The original P versus NP problem asks whether every problem whose solution can be checked efficiently can also be solved efficiently.</p>
+
+<p>The Exponential Time Hypothesis asks a narrower but deeply important question about the time required to solve satisfiability problems.</p>
+
+<p>OpenAI's recent research, if validated, may change the answer to the second question.</p>
+
+<p>But the Economic Model of Computational Complexity asks something different.</p>
+
+<p>Even when a problem becomes mathematically easier, who can afford to solve it?</p>
+
+<p>At what input size?</p>
+
+<p>Using which infrastructure?</p>
+
+<p>At what energy cost?</p>
+
+<p>With what capital requirements?</p>
+
+<p>Within what timeframe?</p>
+
+<p>Who can verify the result?</p>
+
+<p>Who can turn it into a reliable product?</p>
+
+<p>Who controls the resources required?</p>
+
+<p>Who benefits when the cost falls?</p>
+
+<p>And who loses when a previously scarce capability becomes widely available?</p>
+
+<p>These questions are not substitutes for mathematical complexity theory.</p>
+
+<p>They concern the economic consequences of computational capability.</p>
+
+<p>The OpenAI case provides an unusually clear illustration.</p>
+
+<p>A proposed algorithm can overturn a longstanding theoretical assumption while offering no immediate practical advantage.</p>
+
+<p>At the same time, the AI-assisted discovery process may signal a profound change in the economics of producing mathematical knowledge itself.</p>
+
+<p>One frontier may have moved.</p>
+
+<p>Another may not have moved at all.</p>
+
+<p>And a third may be beginning to change much faster than we expected.</p>
+
+<p>Understanding the difference is essential.</p>
+
+<h2>Conclusion</h2>
+
+<p>For decades, computational progress has largely been understood through the lens of faster processors, better algorithms, and greater computational capacity.</p>
+
+<p>Those measures remain important.</p>
+
+<p>But they are incomplete.</p>
+
+<p>The economic value of computation depends on the cost of converting mathematical capability into useful outcomes.</p>
+
+<p>That cost is shaped by hardware, energy, capital, data, expertise, time, organisational capability, and strategic competition.</p>
+
+<p>A mathematically difficult problem can become economically routine.</p>
+
+<p>A mathematically improved algorithm can remain commercially useless.</p>
+
+<p>A company with superior technology can lose to a competitor with better infrastructure.</p>
+
+<p>And a company with ordinary algorithms can build extraordinary economic power by controlling the conditions under which computation takes place.</p>
+
+<p>The distinction is fundamental.</p>
+
+<p>Mathematical complexity determines how computational requirements scale.</p>
+
+<p>Economic complexity determines what it costs to meet those requirements.</p>
+
+<p>Strategic complexity shapes who can access the necessary resources and who captures the resulting value.</p>
+
+<p>The next generation of economic winners may not be those who discover the most advanced algorithms.</p>
+
+<p>They may be those who identify when mathematical advances become economically useful.</p>
+
+<p>Those who reduce the cost of applying them.</p>
+
+<p>Those who build reusable systems around them.</p>
+
+<p>And those who control the scarce resources required to turn computational possibility into economic reality.</p>
+
+<p>The central question is no longer only whether humanity can solve harder problems.</p>
+
+<p>It is whether we can make those solutions affordable.</p>
+
+<p>And, perhaps more importantly, who gets to decide what affordable means.</p>
+
+<p><strong>Because solving the impossible changes mathematics.</strong></p>
+
+<p><strong>Making the impossible affordable changes the economy.</strong></p>
+
+<h2>References</h2>
+
+<p>OpenAI. The Exponential Time Hypothesis is False. October 2026. https://github.com/openai/math/tree/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-2026</p>
+
+<p>OpenAI. Working with Academic Communities to Build Scientific Understanding. October 2026. https://openai.com/index/building-scientific-understanding-with-academic-communities/</p>
+
+<p>OpenAI. Lean Formalisation: The Exponential Time Hypothesis is False. https://github.com/openai/math/blob/main/lean/docs/378.md</p>
+
+<p>Fabio Dias and Yvens Lima. Limits and Constants of OpenAI's Claimed ETH Refutation. October 2026. https://arxiv.org/abs/2611.00517</p>
+
+<p>Research note: As of 9 November 2026, OpenAI's claimed refutation of ETH remains subject to independent scrutiny. The Economic Model of Computational Complexity is a proposed conceptual and economic framework, not a formally established mathematical theorem.</p>
